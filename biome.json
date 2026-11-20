@@ -1,0 +1,147 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.8/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": ["src/**/*.{ts,tsx,js,css}", "*.{js,mjs,ts,mts,json}"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space"
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error",
+        "useExhaustiveDependencies": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
+      "style": {
+        "useNumberNamespace": "off"
+      },
+      "a11y": {
+        "useSemanticElements": "off"
+      }
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "asNeeded"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/components/ui/**"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noLabelWithoutControl": "off"
+          },
+          "suspicious": {
+            "noDoubleEquals": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "src/components/**",
+        "src/hooks/**",
+        "src/lib/**",
+        "src/utils/**",
+        "src/constants/**"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/features/**"],
+                    "message": "Las carpetas compartidas no importan de features/. Ver .agents/rules/architecture.md."
+                  },
+                  {
+                    "group": ["@/app/**"],
+                    "message": "Nadie importa de src/app/. Ver .agents/rules/architecture.md."
+                  }
+                ],
+                "paths": {
+                  "next/navigation": {
+                    "importNames": [
+                      "useRouter",
+                      "usePathname",
+                      "useSearchParams",
+                      "redirect",
+                      "permanentRedirect"
+                    ],
+                    "message": "La navegación la decide src/app/. Ver .agents/rules/architecture.md."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/features/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": ["@/features/*/**", "!@/features/*/server"],
+                    "message": "Otra feature se importa solo por su index.ts o server.ts (@/features/{dominio} o @/features/{dominio}/server). Dentro de la misma feature, imports relativos. Ver .agents/rules/architecture.md."
+                  },
+                  {
+                    "group": ["@/app/**"],
+                    "message": "Nadie importa de src/app/. Ver .agents/rules/architecture.md."
+                  }
+                ],
+                "paths": {
+                  "next/navigation": {
+                    "importNames": [
+                      "useRouter",
+                      "usePathname",
+                      "useSearchParams"
+                    ],
+                    "message": "La navegación del cliente la decide src/app/: la feature recibe hrefs o callbacks. En actions/ se permite redirect(). Ver .agents/rules/architecture.md."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
