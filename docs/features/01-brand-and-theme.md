@@ -46,7 +46,7 @@ Se verifican con una herramienta al implementar.
 
 ## Tipografía
 
-Pendiente. Propuesta para revisar: títulos (`--font-heading`) con una fuente de proporciones amplias que combine con el wordmark y mayúsculas espaciadas; texto (`--font-sans`) sans legible. Se carga con `next/font` en `layout.tsx`, manteniendo los nombres de variable.
+Pila de fuentes del sistema para texto y títulos (`--font-sans`; `--font-heading` apunta a ella), con los títulos en peso ligero. No se cargan archivos de fuentes.
 
 ## Logo
 
@@ -56,12 +56,12 @@ Pendiente. Propuesta para revisar: títulos (`--font-heading`) con una fuente de
 
 ## Tareas
 
-- [x] Confirmar fondo y tipografías (fondo blanco; títulos Cormorant Garamond, texto Geist; fácil de cambiar)
+- [x] Confirmar fondo y tipografías (fondo blanco; fuente del sistema en texto y títulos; fácil de cambiar)
 - [ ] Logo para fondo claro (solo se copió la versión blanca a `public/brand/logo-white.png`; pendiente de la ficha 02)
 - [x] Traducir paleta a `oklch` en `:root` en `globals.css`
 - [x] Agregar token `--highlight` en `:root` y `@theme inline`
-- [x] Cargar fuentes en `layout.tsx` (`--font-sans`, `--font-heading`)
-- [x] `--radius` se mantiene en 0.625rem
+- [x] Definir las fuentes en `globals.css` (`--font-sans`, `--font-heading`)
+- [x] `--radius` en 0.375rem
 - [x] Metadata, favicon y manifest en `app/`
 - [x] Verificar contraste de pares texto/fondo
 - [x] Actualizar `.agents/topics/ui-and-theme.md` y `styling.md` (quitar "marca pendiente")

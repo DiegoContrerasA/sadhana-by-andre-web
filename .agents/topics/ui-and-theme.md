@@ -2,7 +2,7 @@
 
 ## Qué hace
 
-Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de color y radio en CSS, fuentes con `next/font` y campos de formulario conectados a `react-hook-form`.
+Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de color y radio en CSS, fuente del sistema y campos de formulario conectados a `react-hook-form`.
 
 ## Piezas
 
@@ -10,7 +10,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 |---|---|---|
 | Configuración de shadcn | `components.json` (raíz) | Estilo `base-nova`, Base UI, color base `neutral`, íconos `lucide`, alias `@/components`, `@/lib`, `@/hooks` |
 | Tokens | `app/globals.css` | `:root` y `.dark` con los colores de marca en `oklch` y `--radius`; `@theme inline` los expone a Tailwind. Incluye el token `--highlight` (acento decorativo) |
-| Fuentes | `app/layout.tsx` | Geist como `--font-sans`, Cormorant Garamond (500, 600, 700) como `--font-heading` y Geist Mono como `--font-geist-mono` |
+| Fuentes | `app/globals.css` | Pila de fuentes del sistema (`ui-sans-serif, system-ui`), igual que sadhanabyandre.com: no se descarga ninguna fuente. `--font-heading` apunta a `--font-sans`. Los `h1` a `h4` salen en `font-light` por defecto |
 | Marca | `public/brand/`, `public/og.png`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png` | Logo blanco, imagen Open Graph e íconos tomados del sitio `sadhanabyandre` |
 | `cn` | `lib/utils.ts` | Combina clases (reexporta el paquete `cn`) |
 | Primitivas | `components/ui/` | `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
@@ -19,7 +19,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 ## Detalles a tener en cuenta
 
 - **Botones**: en mayúsculas con `tracking-[0.2em]` y `text-xs`.
-- **Alturas**: `Input` e `InputGroup` miden `h-12` (48px); el `Button` por defecto `h-10`, `lg` `h-13` (52px) y `sm` `h-8`. El `Checkbox` mide `size-5` (20px). Es un ajuste de marca hecho en el `cva` de las primitivas de `components/ui/`; si el CLI las regenera, hay que repetirlo.
+- **Alturas**: `Input` e `InputGroup` miden `h-12` (48px); el `Button` por defecto `h-10`, `lg` `h-13` (52px) y `sm` `h-8`. El `Checkbox` mide `size-5` (20px). Es un ajuste de marca hecho en el `cva` de las primitivas de `components/ui/`; si el CLI las regenera, hay que repetirlo. `--radius` es 0.375rem (6px): esquinas suaves, cercanas a las rectas del sitio y cómodas para móvil.
 - **Modales**: `Dialog` y `AlertDialog` usan `p-6` (`sm:p-8`), `gap-6`, ancho `sm:max-w-md`, título `text-3xl font-light`, footer sin fondo ni borde y sin iconos decorativos. Como en las alturas, si el CLI regenera las primitivas hay que repetirlo.
 - **Paleta de marca**: primary ciruela `#9C4684`, secondary crema `#F8F3E8`, accent rosa grisáceo `#DFC8CE` (aclarado), highlight orquídea `#C969B7`. El fondo es blanco. `--input` es más oscuro que `--border` para que el borde de los campos cumpla 3:1.
 - **`--highlight` no es para texto pequeño sobre blanco**: el blanco sobre orquídea da 3.4:1. Su par de texto es `--highlight-foreground` (casi negro).

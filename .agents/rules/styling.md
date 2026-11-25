@@ -64,15 +64,15 @@ Los tokens viven en `src/app/globals.css`:
 
 - `:root` y `.dark` definen los valores (colores en `oklch`, `--radius`).
 - `@theme inline` los expone como utilidades (`--color-primary` → `bg-primary`).
-- Las fuentes se cargan con `next/font` en `src/app/layout.tsx` y llegan como `--font-sans` y `--font-heading`.
+- Las fuentes son la pila del sistema, definida en `@theme inline` como `--font-sans` y `--font-heading`; no se cargan archivos de fuentes.
 
-**Estado actual:** paleta de marca (ciruela, crema, rosa grisáceo y orquídea) aplicada en los tokens, Geist para texto y Cormorant Garamond para títulos. Falta el logo para fondos claros.
+**Estado actual:** paleta de marca (ciruela, crema, rosa grisáceo y orquídea) aplicada en los tokens, fuente del sistema para texto y títulos (como el sitio), con títulos en peso ligero. Falta el logo para fondos claros.
 
 Para cambiar la marca:
 
 1. Los colores de marca se traducen a los tokens semánticos existentes (`--primary`, `--secondary`, `--accent`, `--ring`, `--chart-*`...) en `:root` y `.dark`. No se crean clases por color de marca si un token cubre el rol.
 2. Si la marca necesita un rol que shadcn no tiene, se agrega un token en `:root`, `.dark` y `@theme inline` con nombre de rol (`--highlight`), no de color (`--purple`).
-3. Las tipografías se cambian en `layout.tsx` (`next/font`) manteniendo los nombres `--font-sans` y `--font-heading`.
+3. Las tipografías se cambian en `globals.css` manteniendo los nombres `--font-sans` y `--font-heading` (o se cargan con `next/font` en `layout.tsx`).
 4. Cada par de texto y fondo cumple contraste WCAG AA (4.5:1 para texto normal, 3:1 para texto grande y elementos de interfaz).
 
 Como los componentes solo usan tokens semánticos, cambiar la marca no requiere tocar componentes.

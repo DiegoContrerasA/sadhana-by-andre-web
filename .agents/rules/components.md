@@ -79,7 +79,7 @@ Cuando las props empiezan a describir contenido (`leftIcon`, `subtitle`, `footer
 
 - Imágenes: `next/image`. Enlaces internos: `next/link`.
 - Íconos: `lucide-react`, con `aria-hidden` cuando acompañan texto y `sr-only` cuando están solos.
-- Fuentes: `next/font`, declaradas una sola vez en el layout raíz.
+- Fuentes: la pila del sistema definida en `globals.css` ([`styling.md`](./styling.md#tema-y-marca)). Si la marca exige una fuente propia, se carga con `next/font`, una sola vez en el layout raíz.
 - Video: el reproductor se define con la feature `player`; no se agrega una librería de video sin aprobación.
 
 ## Accesibilidad
