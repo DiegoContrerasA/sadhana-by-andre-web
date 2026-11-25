@@ -47,7 +47,7 @@ refactor(theme): map brand palette to semantic tokens
 
 ## Cuerpo
 
-Solo si el subject no alcanza para explicar el porqué. Viñetas cortas, una por cambio relevante. No se repite el subject ni se narra archivo por archivo.
+Por defecto no hay cuerpo: el commit es directo y se entiende solo con el encabezado. Solo si el encabezado no alcanza para explicar el porqué, hasta tres viñetas cortas.
 
 ## Qué no hacer
 
@@ -61,4 +61,4 @@ Se parte de `main`. Nombres: `feature/<slug-kebab>` y `fix/<slug-kebab>`.
 
 ## Atribución
 
-No se fija acá un formato de atribución de agentes (`Co-Authored-By`, etc.): cada herramienta agrega el suyo según sus propias instrucciones.
+Los commits no llevan `Co-Authored-By` ni ninguna firma o línea de atribución de agentes. El mensaje es solo el encabezado y, si hace falta, un cuerpo corto.

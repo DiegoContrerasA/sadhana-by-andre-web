@@ -72,7 +72,7 @@ Todo cambio o funcionalidad que el usuario pida se entrega completo, no a medias
 
 Hasta que se resuelvan, no se implementan por iniciativa propia:
 
-- **Marca**: paleta de colores, tipografías y logo. Hoy el tema es el neutral de shadcn ([`styling.md`](./styling.md#tema-y-marca)).
+- **Marca**: falta el logo para fondos claros y confirmar las tipografías ([`styling.md`](./styling.md#tema-y-marca)).
 - **Cliente de la API**: el paquete `@yoga/sdk` todavía no existe; `src/lib/api-client.ts` se crea cuando exista ([`data.md`](./data.md)).
 - **Autenticación**: Better Auth contra la API.
 - **i18n**: `next-intl` con es, en y pt. Mientras tanto, los textos visibles van en español en el código.

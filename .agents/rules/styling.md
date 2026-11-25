@@ -66,9 +66,9 @@ Los tokens viven en `src/app/globals.css`:
 - `@theme inline` los expone como utilidades (`--color-primary` → `bg-primary`).
 - Las fuentes se cargan con `next/font` en `src/app/layout.tsx` y llegan como `--font-sans` y `--font-heading`.
 
-**Estado actual:** tema neutral por defecto de shadcn y fuente Geist. La paleta, las tipografías y el logo de la marca están pendientes.
+**Estado actual:** paleta de marca (ciruela, crema, rosa grisáceo y orquídea) aplicada en los tokens, Geist para texto y Cormorant Garamond para títulos. Falta el logo para fondos claros.
 
-Cuando llegue el manual de marca:
+Para cambiar la marca:
 
 1. Los colores de marca se traducen a los tokens semánticos existentes (`--primary`, `--secondary`, `--accent`, `--ring`, `--chart-*`...) en `:root` y `.dark`. No se crean clases por color de marca si un token cubre el rol.
 2. Si la marca necesita un rol que shadcn no tiene, se agrega un token en `:root`, `.dark` y `@theme inline` con nombre de rol (`--highlight`), no de color (`--purple`).
