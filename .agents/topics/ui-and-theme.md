@@ -14,7 +14,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 | Marca | `public/brand/`, `public/og.png`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png` | Logo blanco, imagen Open Graph e íconos tomados del sitio `sadhanabyandre` |
 | `cn` | `lib/utils.ts` | Combina clases (reexporta el paquete `cn`) |
 | Primitivas | `components/ui/` | `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
-| Campos de formulario | `components/form/text-field.tsx` | `TextField`: etiqueta asociada, input, descripción opcional y error de `react-hook-form` |
+| Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando) y `FormError` |
 
 ## Detalles a tener en cuenta
 
@@ -36,5 +36,5 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 
 ## Pruebas
 
-- `components/form/text-field.test.tsx`: asociación de etiqueta, error del schema sin envío, envío con el valor escrito.
+- `components/form/*.test.tsx`: asociación de etiquetas, error visible con `aria-invalid`, mostrar/ocultar contraseña, checkbox, estado cargando de `SubmitButton` y `FormError`. Helper: `test/render-with-form.tsx`.
 - `app/page.test.tsx`: la página pinta un único botón, "Empezar".

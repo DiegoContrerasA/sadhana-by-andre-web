@@ -32,7 +32,7 @@ Todo formulario usa `react-hook-form` con un schema de `zod` conectado por `@hoo
 
 - Los campos de `src/components/form/` son genéricos: reciben `control` y `name` tipados con `Control<T>` y `Path<T>` y usan `useController`.
 - Cada campo arma `Field`, `FieldLabel`, el control, `FieldDescription` y `FieldError` de `src/components/ui/field`, asocia la etiqueta con `useId()` y marca `aria-invalid`.
-- Campo disponible: `TextField` (`src/components/form/text-field.tsx`). Antes de crear uno nuevo, revisa los que hay.
+- Campos disponibles en `src/components/form/`: `TextField` (con `icon` opcional), `PasswordField` y `CheckboxField`. Para el envío están `SubmitButton` (estado cargando) y `FormError` (error general). Antes de crear uno nuevo, revisa los que hay.
 - Un campo no conoce ningún formulario concreto.
 
 ## Comportamiento
