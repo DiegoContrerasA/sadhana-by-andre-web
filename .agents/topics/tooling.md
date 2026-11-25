@@ -34,6 +34,7 @@ Si un paso falla, el commit se cancela y el hook muestra el comando para reprodu
 
 ## Detalles a tener en cuenta
 
+- `package-lock.json` no se versiona (está en `.gitignore` y se quitó del historial). Cada instalación resuelve las versiones desde los rangos de `package.json`, y `npm ci` no funciona en un clon limpio.
 - No se usa `@vitejs/plugin-react`: su cadena de dependencias opcionales pedía una RC de Babel 8 que choca con la de shadcn. Vite 8 transforma TSX solo, con `jsx: react-jsx` del tsconfig. Si hiciera falta (por ejemplo, para el React Compiler en pruebas), se agrega cuando se resuelva el conflicto.
 - `@types/node` está en `^22` porque Vitest 5 lo exige; coincide con el runtime (Node 22).
 - `.agents/skills` y `.claude/skills` vienen del registro de skills (`skills-lock.json`); Biome no los revisa porque solo incluye `src/` y los archivos de configuración de la raíz.
