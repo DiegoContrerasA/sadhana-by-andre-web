@@ -1,5 +1,5 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google"
 
 import { cn } from "@/lib/utils"
 
@@ -10,6 +10,12 @@ const geistSans = Geist({
   subsets: ["latin"],
 })
 
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+})
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -18,6 +24,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sadhana by Andre",
   description: "Aprende yoga postura por postura.",
+  openGraph: {
+    siteName: "Sadhana by Andre",
+    locale: "es_CO",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#9C4684",
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -26,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={cn(
         geistSans.variable,
+        cormorantGaramond.variable,
         geistMono.variable,
         "h-full antialiased",
       )}
