@@ -11,13 +11,13 @@ npx shadcn@latest add dialog
 - Toda primitiva genérica (botón, input, diálogo, menú, tabs) sale del registro de shadcn. No se escribe a mano ni se instala otra librería de componentes.
 - El CLI la deja en `src/components/ui/` e instala sus dependencias. Se commitea tal como la genera.
 - Antes de agregar una, revisa `src/components/ui/`: puede que ya esté.
-- Instaladas: `button`, `field`, `input`, `label`, `separator`.
+- Instaladas: `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea`.
 
 ## No editar `src/components/ui/`
 
 Esa carpeta es código generado: el CLI puede volver a escribirla. No sigue las reglas de estilo del proyecto (Biome solo la formatea).
 
-- La única edición permitida es ajustar la marca (por ejemplo, una variante de color que el manual exige en todo el producto). Se hace en el `cva` de la primitiva y se anota en [`../topics/ui-and-theme.md`](../topics/ui-and-theme.md).
+- La única edición permitida es ajustar la marca en todo el producto (tamaños, espaciado, tipografía o una variante que el manual exige). Se hace en las clases de la primitiva (su `cva` si lo tiene) y se anota en [`../topics/ui-and-theme.md`](../topics/ui-and-theme.md).
 - Para un comportamiento distinto, se compone un componente nuevo en `src/components/` o en la feature que envuelve a la primitiva.
 - Los colores no se cambian en la primitiva: se cambian los tokens en `globals.css` ([`styling.md`](./styling.md#tema-y-marca)).
 

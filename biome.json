@@ -59,7 +59,8 @@
       "linter": {
         "rules": {
           "a11y": {
-            "noLabelWithoutControl": "off"
+            "noLabelWithoutControl": "off",
+            "useKeyWithClickEvents": "off"
           },
           "suspicious": {
             "noDoubleEquals": "off"
