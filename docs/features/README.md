@@ -25,7 +25,7 @@ Las tareas dentro de cada ficha son checklists (`- [ ]` / `- [x]`). Una ficha pa
 |---|---|---|---|
 | 00 | [Referencias y decisiones](./00-references-and-decisions.md) | — | ✅ |
 | 01 | [Marca y tema](./01-brand-and-theme.md) | 1 | 🟨 |
-| 02 | [Componentes base](./02-ui-components.md) | 1 | ⬜ |
+| 02 | [Componentes base](./02-ui-components.md) | 1 | 🟨 |
 | 03 | [Auth: base (Better Auth + mock)](./03-auth-foundation.md) | 2 | ⬜ |
 | 04 | [Auth: iniciar sesión](./04-auth-login.md) | 2 | ⬜ |
 | 05 | [Auth: crear cuenta](./05-auth-register.md) | 3 | ⬜ |

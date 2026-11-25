@@ -1,6 +1,6 @@
 # 02 · Componentes base
 
-Estado: ⬜ · Fase 1
+Estado: 🟨 · Fase 1
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Cada componente interactivo define `variant`, `size`, estados (hover, foco visib
 
 ## Estado actual
 
-Instaladas: `button`, `field`, `input`, `label`, `separator`. Existe `TextField`.
+Instaladas: `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea`. Existen `TextField`, `PasswordField`, `CheckboxField`, `FormError`, `SubmitButton` y la página `/dev/components`. Faltan `Logo` y `AuthCard`.
 
 ## Primitivas a agregar (CLI de shadcn)
 
@@ -62,13 +62,13 @@ Junto a cada componente (`*.test.tsx`): etiqueta asociada, error visible con `ar
 ## Tareas
 
 - [ ] Agregar primitivas con `npx shadcn@latest add`
-- [ ] `PasswordField`
-- [ ] `CheckboxField`
-- [ ] `FormError`
-- [ ] `SubmitButton`
+- [x] `PasswordField`
+- [x] `CheckboxField`
+- [x] `FormError`
+- [x] `SubmitButton`
 - [ ] `Logo`
 - [ ] `AuthCard`
-- [ ] Página `/dev/components` con todos los estados
+- [x] Página `/dev/components` con todos los estados
 - [ ] Pruebas de cada componente
 - [ ] Actualizar `.agents/topics/ui-and-theme.md` (primitivas y campos disponibles) y la lista en `forms.md` / `shadcn.md`
 - [ ] Biome, lint, typecheck y tests en verde

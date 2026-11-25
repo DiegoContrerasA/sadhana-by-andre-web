@@ -15,10 +15,11 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 | `cn` | `lib/utils.ts` | Combina clases (reexporta el paquete `cn`) |
 | Primitivas | `components/ui/` | `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
 | Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando) y `FormError` |
+| Catálogo | `app/dev/components` | Página solo de desarrollo (404 en producción) con todos los componentes base (botones, campos, mensajes y modales) y sus estados, armada en `features/dev` |
 
 ## Detalles a tener en cuenta
 
-- **Botones**: en mayúsculas con `tracking-[0.2em]` y `text-xs`.
+- **Estilo tipográfico del sitio**: títulos livianos, grandes y con interlineado cerrado (`text-5xl leading-none`); etiquetas pequeñas en mayúsculas con mucho espaciado (`text-[0.65rem] tracking-[0.35em] uppercase`); botones en mayúsculas con `tracking-[0.2em]` y `text-xs`. La sección "Tipografía" de `/dev/components` muestra la escala.
 - **Alturas**: `Input` e `InputGroup` miden `h-12` (48px); el `Button` por defecto `h-10`, `lg` `h-13` (52px) y `sm` `h-8`. El `Checkbox` mide `size-5` (20px). Es un ajuste de marca hecho en el `cva` de las primitivas de `components/ui/`; si el CLI las regenera, hay que repetirlo. `--radius` es 0.375rem (6px): esquinas suaves, cercanas a las rectas del sitio y cómodas para móvil.
 - **Modales**: `Dialog` y `AlertDialog` usan `p-6` (`sm:p-8`), `gap-6`, ancho `sm:max-w-md`, título `text-3xl font-light`, footer sin fondo ni borde y sin iconos decorativos. Como en las alturas, si el CLI regenera las primitivas hay que repetirlo.
 - **Paleta de marca**: primary ciruela `#9C4684`, secondary crema `#F8F3E8`, accent rosa grisáceo `#DFC8CE` (aclarado), highlight orquídea `#C969B7`. El fondo es blanco. `--input` es más oscuro que `--border` para que el borde de los campos cumpla 3:1.
