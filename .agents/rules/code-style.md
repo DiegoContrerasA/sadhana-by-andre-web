@@ -74,7 +74,7 @@ El código es corto porque cada pieza hace una sola cosa, no porque esté compri
 - El largo del nombre es proporcional a su alcance: `i` en un bucle de tres líneas, `trialUnlockedPoseIds` en un valor que cruza archivos.
 - Sin redundancia: dentro de `features/catalog`, `getPose`, no `getCatalogPoseData`; una prop `pose`, no `poseObject`. Sin sufijos vacíos como `Data`, `Info`, `Item` o `Manager` si no agregan significado.
 - Manejadores de eventos dentro de un componente: `handle{Evento}` (`handleSubmit`); props de callback: `on{Evento}` (`onSubmit`).
-- El texto visible para el usuario está en español; el código (nombres, tests, commits) en inglés.
+- El texto visible para el usuario va en `messages/` (`es` y `en`); el código (nombres, tests, commits) en inglés.
 
 ## TypeScript
 

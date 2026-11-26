@@ -12,9 +12,12 @@ const variants = [
   "ghost",
   "destructive",
   "link",
+  "outline-primary",
 ] as const
 
-const sizes = ["xs", "sm", "default", "lg"] as const
+const inverseVariants = ["inverse", "outline-inverse", "ghost-inverse"] as const
+
+const sizes = ["xs", "sm", "default", "lg", "pill"] as const
 
 export function ButtonsShowcase() {
   return (
@@ -43,6 +46,13 @@ export function ButtonsShowcase() {
           <ArrowRightIcon data-icon="inline-end" />
         </Button>
         <Button disabled>Deshabilitado</Button>
+      </div>
+      <div className="flex flex-wrap items-center gap-3 rounded-lg bg-primary p-4">
+        {inverseVariants.map((variant) => (
+          <Button key={variant} variant={variant}>
+            {variant}
+          </Button>
+        ))}
       </div>
       <div className="flex flex-wrap items-center gap-3">
         <SubmitButton size="lg" isPending={false} pendingLabel="Enviando…">

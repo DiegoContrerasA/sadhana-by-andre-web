@@ -11,7 +11,7 @@ npx shadcn@latest add dialog
 - Toda primitiva genérica (botón, input, diálogo, menú, tabs) sale del registro de shadcn. No se escribe a mano ni se instala otra librería de componentes.
 - El CLI la deja en `src/components/ui/` e instala sus dependencias. Se commitea tal como la genera.
 - Antes de agregar una, revisa `src/components/ui/`: puede que ya esté.
-- Instaladas: `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea`.
+- Instaladas: `accordion`, `badge`, `sheet`, `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea`.
 
 ## No editar `src/components/ui/`
 
@@ -38,16 +38,14 @@ Esa carpeta es código generado: el CLI puede volver a escribirla. No sigue las 
 Base UI no tiene `asChild`. Para que una primitiva se pinte como otro elemento (por ejemplo, un botón que es un enlace), se usa la prop `render`:
 
 ```tsx
-import Link from "next/link"
-
 import { Button } from "@/components/ui/button"
 
-<Button nativeButton={false} render={<Link href="/posturas" />}>
-  Ver posturas
-</Button>
+<SheetClose render={<Button variant="ghost" size="icon" />}>
+  <XIcon aria-hidden="true" />
+</SheetClose>
 ```
 
-- Cuando el elemento final no es un `<button>` (un `Link`, un `<a>`), se pasa `nativeButton={false}` para que Base UI ajuste los atributos de accesibilidad.
+- Un enlace con aspecto de botón es `LinkButton` de `@/components/link-button` (usa `buttonVariants` con `cn()`; `isExternal` abre en otra pestaña). `buttonVariants` sin `cn()` no resuelve clases en conflicto. No se usa `<Button nativeButton={false} render={<a />}>` para navegar, porque Base UI le pone `role="button"` al enlace.
 - Los ejemplos de internet que usan `asChild` son de la versión sobre Radix: no aplican acá.
 - La documentación de cada primitiva está en [base-ui.com](https://base-ui.com/react/components) y en el registro de shadcn.
 

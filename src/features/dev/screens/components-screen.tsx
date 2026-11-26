@@ -1,4 +1,5 @@
 import { ButtonsShowcase } from "../components/buttons-showcase"
+import { DisplayShowcase } from "../components/display-showcase"
 import { FeedbackShowcase } from "../components/feedback-showcase"
 import { FieldsShowcase } from "../components/fields-showcase"
 import { ModalsShowcase } from "../components/modals-showcase"
@@ -10,6 +11,7 @@ export function ComponentsScreen() {
       <h1 className="font-heading text-5xl">Componentes base</h1>
       <TypographyShowcase />
       <ButtonsShowcase />
+      <DisplayShowcase />
       <FieldsShowcase />
       <FeedbackShowcase />
       <ModalsShowcase />

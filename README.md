@@ -32,6 +32,7 @@ src/
 ├── features/    Un dominio por carpeta (screens, components, data, actions, hooks, schema)
 ├── components/  UI compartida (ui/ = shadcn, form/ = campos de react-hook-form)
 ├── hooks/       Hooks sin dominio
+├── i18n/        Configuración de idiomas (textos en messages/)
 ├── lib/         Cliente de la API, auth, utils de bajo nivel
 ├── constants/   Cache tags y constantes globales
 ├── utils/       Funciones puras

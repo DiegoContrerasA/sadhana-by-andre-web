@@ -13,7 +13,8 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 | Fuentes | `app/globals.css` | Pila de fuentes del sistema (`ui-sans-serif, system-ui`), igual que sadhanabyandre.com: no se descarga ninguna fuente. `--font-heading` apunta a `--font-sans`. Los `h1` a `h4` salen en `font-light` por defecto |
 | Marca | `public/brand/`, `public/og.png`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png` | Logo blanco, imagen Open Graph e íconos tomados del sitio `sadhanabyandre` |
 | `cn` | `lib/utils.ts` | Combina clases (reexporta el paquete `cn`) |
-| Primitivas | `components/ui/` | `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
+| Enlaces | `components/link-button.tsx` | `LinkButton`: enlace con las variantes de `Button` |
+| Primitivas | `components/ui/` | `accordion`, `badge`, `sheet`, `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
 | Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando) y `FormError` |
 | Catálogo | `app/dev/components` | Página solo de desarrollo (404 en producción) con todos los componentes base (botones, campos, mensajes y modales) y sus estados, armada en `features/dev` |
 
@@ -29,7 +30,9 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 - El modo oscuro tiene tokens (`.dark`), pero no hay selector de tema; hoy la app siempre se ve en claro.
 - Las primitivas de `components/ui/` las genera el CLI e importan `cn` del paquete `cn`. Biome desactiva para esa carpeta `noLabelWithoutControl` (`Label` es un wrapper; la asociación se hace donde se usa), `useKeyWithClickEvents` (el addon de `InputGroup` enfoca el input al hacer clic) y `noDoubleEquals` (código del CLI).
 - Los formularios llevan `noValidate` para que los errores los muestre el schema de `zod` y no el navegador.
-- La página de inicio (`app/page.tsx`) es provisional: solo pinta un `Button` de shadcn ("Empezar") centrado, todavía sin destino.
+- Ajustes de marca en primitivas (hay que repetirlos si el CLI las regenera): `Button` suma las variantes `outline-primary`, `inverse`, `outline-inverse`, `ghost-inverse` y el tamaño `pill`; `Badge` suma `soft`, `outline-inverse` y los tamaños `lg` y `label`; `Accordion` usa ícono de más y menos y la tipografía de la marca; `Sheet` suma `side="full"`.
+- Los tokens `--overlay` (negro) y `--overlay-foreground` (blanco) son para texto sobre fotos y para el pie oscuro.
+- La página de inicio es la landing: ver [`marketing.md`](./marketing.md).
 
 ## Archivos clave
 
@@ -38,4 +41,3 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 ## Pruebas
 
 - `components/form/*.test.tsx`: asociación de etiquetas, error visible con `aria-invalid`, mostrar/ocultar contraseña, checkbox, estado cargando de `SubmitButton` y `FormError`. Helper: `test/render-with-form.tsx`.
-- `app/page.test.tsx`: la página pinta un único botón, "Empezar".

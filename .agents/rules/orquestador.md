@@ -75,7 +75,7 @@ Hasta que se resuelvan, no se implementan por iniciativa propia:
 - **Marca**: falta el logo para fondos claros y confirmar las tipografías ([`styling.md`](./styling.md#tema-y-marca)).
 - **Cliente de la API**: el paquete `@yoga/sdk` todavía no existe; `src/lib/api-client.ts` se crea cuando exista ([`data.md`](./data.md)).
 - **Autenticación**: Better Auth contra la API.
-- **i18n**: `next-intl` con es, en y pt. Mientras tanto, los textos visibles van en español en el código.
+- **i18n**: `next-intl` está activo con `es` y `en` (textos en `messages/`). Falta decidir `pt`.
 - **Modo oscuro**: los tokens `.dark` existen, falta el selector de tema.
 - **React Compiler**: no está activado.
 - **E2E**: Playwright para pantallas async y flujos completos.

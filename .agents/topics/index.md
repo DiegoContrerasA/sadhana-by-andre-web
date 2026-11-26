@@ -4,10 +4,11 @@ Documentación viva de cómo funciona cada flujo y cada capa de la app. Sirve de
 
 ## Flujos
 
-Todavía no hay flujos implementados. Se agregan a medida que se construyen (auth, catálogo, reproductor, progreso, billing, cuenta, admin).
+Se agregan a medida que se construyen.
 
 | Tópico | Qué cubre |
 |---|---|
+| [`marketing.md`](./marketing.md) | Web pública: landing en es y en, idiomas y SEO |
 
 ## Capas
 

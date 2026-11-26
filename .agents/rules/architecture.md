@@ -22,6 +22,7 @@ src/
 │   ├── ui/              Primitivas de shadcn (generadas por el CLI).
 │   └── form/            Campos conectados a react-hook-form.
 ├── hooks/               Hooks compartidos sin dominio.
+├── i18n/                Configuración de next-intl (los textos viven en messages/).
 ├── lib/                 Infraestructura: cliente de la API, auth, utils de bajo nivel.
 ├── constants/           Cache tags y constantes globales.
 ├── utils/               Funciones puras.
