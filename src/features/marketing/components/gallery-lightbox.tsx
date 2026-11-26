@@ -10,12 +10,14 @@ import type { GalleryPhoto } from "./gallery-grid"
 type GalleryLightboxProps = {
   photos: GalleryPhoto[]
   index: number
+  labels: Record<string, string>
   onClose: () => void
 }
 
 export function GalleryLightbox({
   photos,
   index,
+  labels,
   onClose,
 }: GalleryLightboxProps) {
   const slides = photos.map(({ image, alt }) => ({
@@ -31,6 +33,7 @@ export function GalleryLightbox({
       close={onClose}
       index={index}
       slides={slides}
+      labels={labels}
       plugins={[Zoom]}
     />
   )

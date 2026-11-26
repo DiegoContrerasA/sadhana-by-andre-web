@@ -29,7 +29,7 @@ Las tareas dentro de cada ficha son checklists (`- [ ]` / `- [x]`). Una ficha pa
 | 03 | [Auth: base (Better Auth + mock)](./03-auth-foundation.md) | 2 | ⬜ |
 | 04 | [Auth: iniciar sesión](./04-auth-login.md) | 2 | 🟨 |
 | 05 | [Auth: crear cuenta](./05-auth-register.md) | 3 | 🟨 |
-| 06 | [Auth: recuperar contraseña](./06-auth-password-recovery.md) | 4 | ⬜ |
+| 06 | [Auth: recuperar contraseña](./06-auth-password-recovery.md) | 4 | 🟨 |
 | 07 | [Calidad: commits, hooks, lint y pruebas](./07-quality-tooling.md) | transversal | 🟨 |
 | 08 | [Web pública: migración desde Astro](./08-public-site-migration.md) | web pública | 🟨 |
 

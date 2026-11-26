@@ -1,6 +1,10 @@
 import { getLocale } from "next-intl/server"
 
-import { ComingSoonScreen, getAuthMetadata } from "@/features/auth/server"
+import {
+  ForgotPasswordScreen,
+  getAuthMetadata,
+  getMockResetHref,
+} from "@/features/auth/server"
 import { getPathname } from "@/i18n/navigation"
 
 export function generateMetadata() {
@@ -9,11 +13,12 @@ export function generateMetadata() {
 
 export default async function ForgotPasswordPage() {
   const locale = await getLocale()
+  const resetHref = getPathname({ href: "/reset-password", locale })
 
   return (
-    <ComingSoonScreen
-      page="forgotPassword"
+    <ForgotPasswordScreen
       signInHref={getPathname({ href: "/sign-in", locale })}
+      mockResetHref={getMockResetHref(resetHref)}
     />
   )
 }

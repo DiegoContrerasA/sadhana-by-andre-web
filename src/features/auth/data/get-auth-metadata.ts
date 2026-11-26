@@ -3,7 +3,7 @@ import "server-only"
 import type { Metadata } from "next"
 import { getMessages } from "next-intl/server"
 
-type AuthPage = "signIn" | "signUp" | "forgotPassword"
+type AuthPage = "signIn" | "signUp" | "forgotPassword" | "resetPassword"
 
 export async function getAuthMetadata(page: AuthPage): Promise<Metadata> {
   const { auth } = await getMessages()

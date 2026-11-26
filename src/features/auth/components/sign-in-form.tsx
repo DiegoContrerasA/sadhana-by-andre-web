@@ -10,8 +10,9 @@ import { SubmitButton } from "@/components/form/submit-button"
 import { TextField } from "@/components/form/text-field"
 import { GoogleButton } from "@/components/google-button"
 import { FieldSeparator } from "@/components/ui/field"
+import { useIsHydrated } from "@/hooks/use-is-hydrated"
 
-import { useSignIn } from "../hooks/use-sign-in"
+import { useSignInForm } from "../hooks/use-sign-in-form"
 import { AuthLink } from "./auth-link"
 
 type SignInFormProps = {
@@ -24,8 +25,9 @@ export function SignInForm({
   forgotPasswordHref,
 }: SignInFormProps) {
   const t = useTranslations("auth.signIn")
-  const form = useSignIn()
+  const form = useSignInForm()
   const isBusy = form.pendingMethod !== null
+  const isHydrated = useIsHydrated()
 
   return (
     <div className="flex flex-col gap-8">
@@ -39,6 +41,7 @@ export function SignInForm({
       </GoogleButton>
       <FieldSeparator>{t("separator")}</FieldSeparator>
       <form
+        method="post"
         noValidate
         autoComplete="off"
         onSubmit={form.submit}
@@ -55,22 +58,25 @@ export function SignInForm({
           autoComplete="off"
           autoCapitalize="none"
         />
-        <PasswordField
-          control={form.control}
-          name="password"
-          label={t("password")}
-          placeholder={t("passwordPlaceholder")}
-          showLabel={t("showPassword")}
-          hideLabel={t("hidePassword")}
-          autoComplete="new-password"
-        />
-        <AuthLink href={forgotPasswordHref} className="-mt-2 self-end">
-          {t("forgotPassword")}
-        </AuthLink>
-        <FormError message={form.errorMessage} />
+        <div className="flex flex-col gap-4">
+          <PasswordField
+            control={form.control}
+            name="password"
+            label={t("password")}
+            placeholder={t("passwordPlaceholder")}
+            showLabel={t("showPassword")}
+            hideLabel={t("hidePassword")}
+            autoComplete="new-password"
+          />
+          <AuthLink href={forgotPasswordHref} className="self-end">
+            {t("forgotPassword")}
+          </AuthLink>
+        </div>
+        <FormError message={form.errorMessage} shouldFocus />
         <FormSuccess message={form.isSuccess ? t("success") : undefined} />
         <SubmitButton
           size="lg"
+          disabled={!isHydrated || isBusy}
           isPending={form.pendingMethod === "email"}
           pendingLabel={t("pending")}
         >

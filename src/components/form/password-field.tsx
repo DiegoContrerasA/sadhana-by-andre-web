@@ -59,6 +59,9 @@ export function PasswordField<TFieldValues extends FieldValues>({
           id={id}
           type={isVisible ? "text" : "password"}
           autoComplete={autoComplete}
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           placeholder={placeholder}
           aria-invalid={isInvalid}
         />

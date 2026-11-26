@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import { cn } from "@/lib/utils"
+
 import logo from "../assets/logo.png"
 
 type HeroBrandProps = {
@@ -13,7 +15,7 @@ const enter = "md:animate-hero-enter md:motion-reduce:animate-none"
 export function HeroBrand({ logoAlt, byline, headline }: HeroBrandProps) {
   return (
     <div className="flex flex-col items-center md:items-start">
-      <div className={`${enter} [animation-delay:100ms]`}>
+      <div className={cn(enter, "[animation-delay:100ms]")}>
         <Image
           src={logo}
           alt={logoAlt}
@@ -23,12 +25,18 @@ export function HeroBrand({ logoAlt, byline, headline }: HeroBrandProps) {
         />
       </div>
       <p
-        className={`${enter} text-xs tracking-[0.35em] text-overlay-foreground/70 uppercase [animation-delay:250ms]`}
+        className={cn(
+          enter,
+          "text-xs tracking-[0.35em] text-overlay-foreground/70 uppercase [animation-delay:250ms]",
+        )}
       >
         {byline}
       </p>
       <h1
-        className={`${enter} mt-5 text-xl text-overlay-foreground text-shadow-md [animation-delay:320ms] md:text-3xl`}
+        className={cn(
+          enter,
+          "mt-5 text-xl text-overlay-foreground text-shadow-md [animation-delay:320ms] md:text-3xl",
+        )}
       >
         {headline}
       </h1>

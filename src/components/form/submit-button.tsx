@@ -6,19 +6,20 @@ import { Button } from "@/components/ui/button"
 type SubmitButtonProps = {
   isPending: boolean
   pendingLabel: string
-} & Omit<ComponentProps<typeof Button>, "type" | "disabled">
+} & Omit<ComponentProps<typeof Button>, "type">
 
 export function SubmitButton({
   isPending,
   pendingLabel,
   children,
+  disabled,
   ...buttonProps
 }: SubmitButtonProps) {
   return (
     <Button
       {...buttonProps}
       type="submit"
-      disabled={isPending}
+      disabled={disabled || isPending}
       aria-busy={isPending}
     >
       {isPending ? (

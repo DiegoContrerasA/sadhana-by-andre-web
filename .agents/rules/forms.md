@@ -37,6 +37,7 @@ Todo formulario usa `react-hook-form` con un schema de `zod` conectado por `@hoo
 
 ## Comportamiento
 
+- El `<form>` lleva `method="post"` y su envío queda deshabilitado hasta que la página está lista (`useIsHydrated`). Sin esto, enviar antes de que cargue el JavaScript pone los datos, incluida la contraseña, en la URL. Mientras hay una petición en curso no se puede iniciar otra.
 - El `<form>` lleva `noValidate`: la validación la hace el schema, no el navegador, para que los mensajes sean siempre los nuestros.
 - El botón de envío se deshabilita mientras `isPending` es verdadero y muestra que está cargando.
 - Un formulario no se cierra ni limpia antes de que la action responda con éxito, y conserva lo escrito si falla.

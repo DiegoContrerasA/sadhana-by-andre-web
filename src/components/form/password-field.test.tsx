@@ -26,6 +26,15 @@ function renderPasswordField(errors?: {
 }
 
 describe("PasswordField", () => {
+  it("keeps the keyboard from altering a revealed password", () => {
+    renderPasswordField()
+    const input = screen.getByLabelText("Contraseña")
+
+    expect(input).toHaveAttribute("autocapitalize", "none")
+    expect(input).toHaveAttribute("autocorrect", "off")
+    expect(input).toHaveAttribute("spellcheck", "false")
+  })
+
   it("associates the label with a hidden password input", () => {
     renderPasswordField()
 

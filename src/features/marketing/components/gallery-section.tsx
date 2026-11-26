@@ -2,6 +2,7 @@ import type { Messages } from "next-intl"
 import { useTranslations } from "next-intl"
 
 import { galleryPhotos } from "../utils/gallery-photos"
+import { toLightboxLabels } from "../utils/to-lightbox-labels"
 import { GalleryGrid } from "./gallery-grid"
 import { SectionHeader } from "./section-header"
 
@@ -28,7 +29,10 @@ export function GallerySection({ gallery }: GallerySectionProps) {
         <p className="mx-auto mt-6 mb-16 max-w-lg text-center leading-relaxed text-muted-foreground">
           {gallery.body}
         </p>
-        <GalleryGrid photos={photos} />
+        <GalleryGrid
+          photos={photos}
+          viewerLabels={toLightboxLabels(gallery.viewer)}
+        />
       </div>
     </section>
   )

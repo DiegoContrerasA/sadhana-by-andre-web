@@ -1,6 +1,7 @@
 import { z } from "zod"
 
 import { createEmailSchema } from "./email.schema"
+import { createPasswordSchema } from "./password.schema"
 
 type SignUpMessageKey =
   | "firstNameRequired"
@@ -37,12 +38,7 @@ export function createSignUpSchema(t: Translate) {
       .regex(/^\+?[\d\s()-]+$/, t("phoneInvalid"))
       .transform((value) => value.replace(/[\s()-]/g, ""))
       .pipe(z.string().regex(/^\+?\d{7,15}$/, t("phoneInvalid"))),
-    password: z
-      .string()
-      .min(1, t("passwordRequired"))
-      .min(8, t("passwordMin"))
-      .max(128, t("passwordMax"))
-      .regex(/^(?=.*\p{L})(?=.*\d)/u, t("passwordWeak")),
+    password: createPasswordSchema(t),
   })
 }
 

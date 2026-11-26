@@ -24,12 +24,20 @@ export function HeroIntro({ hero }: HeroIntroProps) {
         />
         <div className="flex flex-col gap-1 text-overlay-foreground md:text-overlay-foreground/80">
           <p
-            className={`${enter} ${tagline} text-lg [animation-delay:400ms] md:text-xl`}
+            className={cn(
+              enter,
+              tagline,
+              "text-lg [animation-delay:400ms] md:text-xl",
+            )}
           >
             {hero.tagline1}
           </p>
           <p
-            className={`${enter} ${tagline} text-base [animation-delay:520ms] md:text-lg`}
+            className={cn(
+              enter,
+              tagline,
+              "text-base [animation-delay:520ms] md:text-lg",
+            )}
           >
             {hero.tagline2}
           </p>

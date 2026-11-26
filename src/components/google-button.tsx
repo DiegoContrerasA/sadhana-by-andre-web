@@ -28,10 +28,17 @@ export function GoogleButton({
       {isPending ? (
         <Loader2Icon
           aria-hidden="true"
+          data-icon="inline-start"
           className="animate-spin motion-reduce:animate-none"
         />
       ) : (
-        <Image src="/brand/google.svg" alt="" width={18} height={18} />
+        <Image
+          src="/brand/google.svg"
+          alt=""
+          width={18}
+          height={18}
+          data-icon="inline-start"
+        />
       )}
       {isPending ? pendingLabel : children}
     </Button>

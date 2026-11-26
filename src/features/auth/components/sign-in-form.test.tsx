@@ -1,6 +1,7 @@
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { NextIntlClientProvider } from "next-intl"
+import { renderToString } from "react-dom/server"
 import { beforeEach, describe, expect, it, vi } from "vitest"
 
 import es from "../../../../messages/es.json"
@@ -15,12 +16,14 @@ vi.mock("../actions/sign-in-with-google", () => ({
 
 const copy = es.auth.signIn
 
+const formElement = (
+  <NextIntlClientProvider locale="es" messages={{ auth: es.auth }}>
+    <SignInForm signUpHref="/sign-up" forgotPasswordHref="/forgot-password" />
+  </NextIntlClientProvider>
+)
+
 function renderForm() {
-  render(
-    <NextIntlClientProvider locale="es" messages={{ auth: es.auth }}>
-      <SignInForm signUpHref="/sign-up" forgotPasswordHref="/forgot-password" />
-    </NextIntlClientProvider>,
-  )
+  render(formElement)
 }
 
 async function fillAndSubmit(email: string, password: string) {
@@ -57,6 +60,53 @@ describe("SignInForm", () => {
     expect(
       screen.getByRole("link", { name: copy.forgotPassword }),
     ).toHaveAttribute("href", "/forgot-password")
+  })
+
+  it("cannot send the password natively before the page is ready", () => {
+    const container = document.createElement("div")
+    container.innerHTML = renderToString(formElement)
+
+    expect(container.querySelector("form")).toHaveAttribute("method", "post")
+    expect(container.querySelector('button[type="submit"]')).toBeDisabled()
+  })
+
+  it("blocks the email submit while google is pending", async () => {
+    const response = Promise.withResolvers<{ ok: true }>()
+    vi.mocked(signInWithGoogle).mockReturnValue(response.promise)
+    renderForm()
+
+    await userEvent.click(screen.getByRole("button", { name: copy.google }))
+
+    expect(screen.getByRole("button", { name: copy.submit })).toBeDisabled()
+    await act(async () => response.resolve({ ok: true }))
+  })
+
+  it("removes the previous result when the next attempt is invalid", async () => {
+    vi.mocked(signIn).mockResolvedValue({ ok: true })
+    renderForm()
+    await fillAndSubmit("ana@correo.com", "clave")
+    expect(
+      await screen.findByText(copy.success, { selector: "p" }),
+    ).toBeInTheDocument()
+
+    const submit = await screen.findByRole("button", { name: copy.submit })
+
+    await userEvent.clear(screen.getByLabelText(copy.email))
+    await userEvent.click(submit)
+
+    expect(screen.queryAllByText(copy.success)).toHaveLength(0)
+  })
+
+  it("moves focus to the server error", async () => {
+    vi.mocked(signIn).mockResolvedValue({
+      ok: false,
+      error: "invalidCredentials",
+    })
+    renderForm()
+
+    await fillAndSubmit("ana@correo.com", "clave")
+
+    expect(await screen.findByRole("alert")).toHaveFocus()
   })
 
   it("shows the validation errors and does not submit", async () => {

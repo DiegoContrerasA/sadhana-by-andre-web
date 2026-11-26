@@ -132,4 +132,4 @@ Reglas sin excepción (las que dicen **Biome** fallan en el lint):
 | Un test | Junto al archivo que prueba (`*.test.ts(x)`) |
 | Un helper, mock o factory de pruebas | `src/test/` |
 
-Un componente sube de una feature a `src/components/` cuando una segunda feature lo necesita, no antes.
+Un componente sube de una feature a `src/components/` cuando una segunda feature lo necesita, no antes. Excepción: un control genérico sin lógica de dominio que el usuario decidió compartir, como `GoogleButton`.

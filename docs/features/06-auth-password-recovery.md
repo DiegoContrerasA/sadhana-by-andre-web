@@ -1,6 +1,10 @@
 # 06 · Auth: recuperar contraseña
 
-Estado: ⬜ · Fase 4 · Depende de 03 y 05
+Estado: 🟨 · Fase 4 · Primera entrega en revisión
+
+## Primera entrega (mock)
+
+Incluye las dos pantallas, sus validaciones y el estado de enlace inválido. En lugar de `/dev/mailbox`, la confirmación muestra un enlace de prueba. No se envía correo ni se guarda la contraseña, el token es fijo (sin vencimiento ni un solo uso), no hay límite de intentos y no se redirige solo al terminar.
 
 Dos pantallas: solicitar el enlace y restablecer con el token.
 

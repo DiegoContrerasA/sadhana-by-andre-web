@@ -15,7 +15,7 @@ export function FacialVideo({ playLabel, pauseLabel }: FacialVideoProps) {
     const video = event.currentTarget.previousElementSibling
     if (!(video instanceof HTMLVideoElement)) return
     if (video.paused) {
-      video.play()
+      video.play().catch(() => setIsPlaying(false))
       return
     }
     video.pause()

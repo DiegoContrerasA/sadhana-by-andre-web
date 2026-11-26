@@ -1,6 +1,7 @@
 import { InfoIcon } from "lucide-react"
 
 import { FormError } from "@/components/form/form-error"
+import { FormSuccess } from "@/components/form/form-success"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 import { ShowcaseSection } from "./showcase-section"
@@ -24,6 +25,7 @@ export function FeedbackShowcase() {
         <AlertDescription>Intenta de nuevo en un momento.</AlertDescription>
       </Alert>
       <FormError message="Correo o contraseña incorrectos" />
+      <FormSuccess message="Cambios guardados" />
     </ShowcaseSection>
   )
 }

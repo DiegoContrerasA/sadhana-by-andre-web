@@ -25,7 +25,7 @@ export function PoseSummary({ name, level }: PoseSummaryProps) {
 - Declaración con `function` y export nombrado.
 - Props en un `type {Componente}Props` declarado encima del componente.
 - Props desestructuradas en la firma, con valores por defecto ahí mismo.
-- Un componente por archivo. Un subcomponente, por pequeño que sea, va en su propio archivo.
+- Un componente por archivo. Un subcomponente, por pequeño que sea, va en su propio archivo. La excepción son las primitivas de shadcn en `src/components/ui/`, que se dejan como las genera el CLI. La regla también aplica a rutas y helpers de pruebas.
 - Sin `React.FC`. Sin `memo`, `useMemo` ni `useCallback` salvo un problema de rendimiento medido.
 
 ## Servidor y cliente

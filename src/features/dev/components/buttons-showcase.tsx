@@ -1,6 +1,7 @@
 import { ArrowRightIcon, PlusIcon } from "lucide-react"
 
 import { SubmitButton } from "@/components/form/submit-button"
+import { GoogleButton } from "@/components/google-button"
 import { Button } from "@/components/ui/button"
 
 import { ShowcaseSection } from "./showcase-section"
@@ -53,6 +54,14 @@ export function ButtonsShowcase() {
             {variant}
           </Button>
         ))}
+      </div>
+      <div className="flex flex-wrap items-center gap-3">
+        <GoogleButton isPending={false} pendingLabel="Conectando…">
+          Continuar con Google
+        </GoogleButton>
+        <GoogleButton isPending pendingLabel="Conectando…">
+          Continuar con Google
+        </GoogleButton>
       </div>
       <div className="flex flex-wrap items-center gap-3">
         <SubmitButton size="lg" isPending={false} pendingLabel="Enviando…">

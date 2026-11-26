@@ -37,5 +37,6 @@ export function useAuthRequest<TError extends string>() {
       onError?: (error: TError | "unknown") => void,
     ) => run("email", request, onError),
     submitGoogle: () => run("google", signInWithGoogle),
+    reset: () => setResult(null),
   }
 }

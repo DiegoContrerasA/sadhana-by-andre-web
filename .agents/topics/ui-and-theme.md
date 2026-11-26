@@ -37,7 +37,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 
 ## Archivos clave
 
-`app/globals.css`, `app/layout.tsx`, `components/ui/`, `components/form/`, `lib/utils.ts`.
+`app/globals.css`, `app/[locale]/layout.tsx`, `components/ui/`, `components/form/`, `lib/utils.ts`.
 
 ## Pruebas
 

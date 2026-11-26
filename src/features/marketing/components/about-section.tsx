@@ -43,7 +43,7 @@ export function AboutSection({ about }: AboutSectionProps) {
               <p key={paragraph}>{paragraph}</p>
             ))}
             <blockquote className="border-l-2 border-primary pl-5 text-lg leading-snug font-light text-primary italic md:text-xl">
-              <p>{about.quote}</p>
+              {about.quote}
             </blockquote>
           </div>
           <div aria-hidden="true" className="h-px w-10 bg-primary" />

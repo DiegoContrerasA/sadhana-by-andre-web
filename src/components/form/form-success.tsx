@@ -7,14 +7,17 @@ type FormSuccessProps = {
 }
 
 export function FormSuccess({ message }: FormSuccessProps) {
-  if (!message) {
-    return null
-  }
-
   return (
-    <Alert role="status">
-      <CircleCheckIcon aria-hidden />
-      <AlertDescription>{message}</AlertDescription>
-    </Alert>
+    <>
+      <p role="status" className="sr-only">
+        {message}
+      </p>
+      {message ? (
+        <Alert role="presentation" aria-hidden="true">
+          <CircleCheckIcon aria-hidden />
+          <AlertDescription>{message}</AlertDescription>
+        </Alert>
+      ) : null}
+    </>
   )
 }

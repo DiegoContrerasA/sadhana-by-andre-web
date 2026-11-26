@@ -1,23 +1,18 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useTranslations } from "next-intl"
-import { useMemo } from "react"
 import { useForm } from "react-hook-form"
 
 import { signIn } from "../actions/sign-in"
 import { createSignInSchema, type SignInValues } from "../schema/sign-in.schema"
 import { useAuthRequest } from "./use-auth-request"
 
-export function useSignIn() {
+export function useSignInForm() {
   const t = useTranslations("auth.signIn.errors")
-  const schema = useMemo(
-    () =>
-      createSignInSchema({
-        emailRequired: t("emailRequired"),
-        emailInvalid: t("emailInvalid"),
-        passwordRequired: t("passwordRequired"),
-      }),
-    [t],
-  )
+  const schema = createSignInSchema({
+    emailRequired: t("emailRequired"),
+    emailInvalid: t("emailInvalid"),
+    passwordRequired: t("passwordRequired"),
+  })
   const { control, handleSubmit, clearErrors } = useForm<SignInValues>({
     resolver: zodResolver(schema),
     defaultValues: { email: "", password: "" },
@@ -26,7 +21,10 @@ export function useSignIn() {
 
   return {
     control,
-    submit: handleSubmit((values) => request.submitEmail(() => signIn(values))),
+    submit: handleSubmit(
+      (values) => request.submitEmail(() => signIn(values)),
+      request.reset,
+    ),
     submitGoogle: () => {
       clearErrors()
       request.submitGoogle()

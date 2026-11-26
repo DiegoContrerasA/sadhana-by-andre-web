@@ -1,6 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useTranslations } from "next-intl"
-import { useMemo } from "react"
 import { useForm } from "react-hook-form"
 
 import { signUp } from "../actions/sign-up"
@@ -15,23 +14,29 @@ const defaultValues: SignUpValues = {
   password: "",
 }
 
-export function useSignUp() {
+export function useSignUpForm() {
   const t = useTranslations("auth.signUp.errors")
-  const schema = useMemo(() => createSignUpSchema((key) => t(key)), [t])
-  const { control, handleSubmit, clearErrors, setError } =
+  const schema = createSignUpSchema((key) => t(key))
+  const { control, handleSubmit, clearErrors, setError, getValues } =
     useForm<SignUpValues>({ resolver: zodResolver(schema), defaultValues })
   const request = useAuthRequest<"emailTaken" | "invalidInput">()
   const generalError = request.error === "emailTaken" ? null : request.error
 
-  function showEmailError(error: string) {
-    if (error !== "emailTaken") return
+  function showEmailError(error: string, submittedEmail: string) {
+    const currentEmail = getValues("email").trim().toLowerCase()
+    if (error !== "emailTaken" || currentEmail !== submittedEmail) return
     setError("email", { message: t("emailTaken") }, { shouldFocus: true })
   }
 
   return {
     control,
-    submit: handleSubmit((values) =>
-      request.submitEmail(() => signUp(values), showEmailError),
+    submit: handleSubmit(
+      (values) =>
+        request.submitEmail(
+          () => signUp(values),
+          (error) => showEmailError(error, values.email),
+        ),
+      request.reset,
     ),
     submitGoogle: () => {
       clearErrors()

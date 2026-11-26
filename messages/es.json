@@ -252,7 +252,19 @@
     "heading": "Encuentro de",
     "headingEm": "Bienestar 2026",
     "body": "Imágenes del último evento realizado.",
-    "imgAlt": "Galería Sadhana by Andre — foto {number}"
+    "imgAlt": "Galería Sadhana by Andre — foto {number}",
+    "viewer": {
+      "previous": "Foto anterior",
+      "next": "Foto siguiente",
+      "close": "Cerrar",
+      "zoomIn": "Acercar",
+      "zoomOut": "Alejar",
+      "slide": "Diapositiva",
+      "carousel": "Carrusel",
+      "lightbox": "Visor de fotos",
+      "photoGallery": "Galería de fotos",
+      "position": "{index} de {total}"
+    }
   },
   "faq": {
     "label": "Preguntas Frecuentes",
@@ -387,11 +399,49 @@
     },
     "forgotPassword": {
       "metaTitle": "Recuperar contraseña | Sadhana by Andre",
-      "title": "Recuperar contraseña"
+      "title": "Recuperar contraseña",
+      "description": "Escribe tu correo y te enviaremos un enlace para crear una contraseña nueva.",
+      "email": "Correo",
+      "emailPlaceholder": "tu@correo.com",
+      "submit": "Enviar enlace",
+      "pending": "Enviando…",
+      "success": "Si el correo está registrado, te enviamos un enlace para restablecer tu contraseña.",
+      "mockLink": "Abrir enlace de prueba",
+      "back": "Volver a iniciar sesión",
+      "errors": {
+        "emailRequired": "Ingresa tu correo",
+        "emailInvalid": "Ingresa un correo válido",
+        "invalidInput": "Revisa los datos e intenta de nuevo",
+        "unknown": "Algo salió mal. Intenta de nuevo"
+      }
     },
-    "comingSoon": {
-      "body": "Esta opción estará disponible pronto.",
-      "back": "Volver a iniciar sesión"
+    "resetPassword": {
+      "metaTitle": "Nueva contraseña | Sadhana by Andre",
+      "title": "Nueva contraseña",
+      "password": "Contraseña nueva",
+      "passwordPlaceholder": "Crea tu contraseña",
+      "passwordHint": "Mínimo 8 caracteres, con una letra y un número",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPlaceholder": "Repite tu contraseña",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "submit": "Guardar contraseña",
+      "pending": "Guardando…",
+      "success": "Cambio simulado correcto. La contraseña todavía no se guarda.",
+      "signIn": "Iniciar sesión",
+      "invalidTitle": "El enlace no es válido o ya venció",
+      "requestNew": "Solicitar un nuevo enlace",
+      "errors": {
+        "passwordRequired": "Ingresa una contraseña",
+        "passwordMin": "Usa al menos 8 caracteres",
+        "passwordMax": "Usa máximo 128 caracteres",
+        "passwordWeak": "Incluye al menos una letra y un número",
+        "confirmRequired": "Confirma tu contraseña",
+        "mismatch": "Las contraseñas no coinciden",
+        "invalidToken": "El enlace no es válido o ya venció",
+        "invalidInput": "Revisa los datos e intenta de nuevo",
+        "unknown": "Algo salió mal. Intenta de nuevo"
+      }
     }
   }
 }

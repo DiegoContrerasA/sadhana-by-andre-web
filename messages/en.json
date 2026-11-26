@@ -252,7 +252,19 @@
     "heading": "Wellness",
     "headingEm": "Gathering 2026",
     "body": "Photos from our most recent event.",
-    "imgAlt": "Sadhana by Andre Gallery — photo {number}"
+    "imgAlt": "Sadhana by Andre Gallery — photo {number}",
+    "viewer": {
+      "previous": "Previous photo",
+      "next": "Next photo",
+      "close": "Close",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "slide": "Slide",
+      "carousel": "Carousel",
+      "lightbox": "Photo viewer",
+      "photoGallery": "Photo gallery",
+      "position": "{index} of {total}"
+    }
   },
   "faq": {
     "label": "Frequently Asked Questions",
@@ -387,11 +399,49 @@
     },
     "forgotPassword": {
       "metaTitle": "Recover password | Sadhana by Andre",
-      "title": "Recover password"
+      "title": "Recover password",
+      "description": "Enter your email and we will send you a link to create a new password.",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "submit": "Send link",
+      "pending": "Sending…",
+      "success": "If the email is registered, we sent you a link to reset your password.",
+      "mockLink": "Open test link",
+      "back": "Back to sign in",
+      "errors": {
+        "emailRequired": "Enter your email",
+        "emailInvalid": "Enter a valid email",
+        "invalidInput": "Check your details and try again",
+        "unknown": "Something went wrong. Try again"
+      }
     },
-    "comingSoon": {
-      "body": "This option will be available soon.",
-      "back": "Back to sign in"
+    "resetPassword": {
+      "metaTitle": "New password | Sadhana by Andre",
+      "title": "New password",
+      "password": "New password",
+      "passwordPlaceholder": "Create your password",
+      "passwordHint": "At least 8 characters, with a letter and a number",
+      "confirmPassword": "Confirm password",
+      "confirmPlaceholder": "Repeat your password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "submit": "Save password",
+      "pending": "Saving…",
+      "success": "Simulated change succeeded. The password is not saved yet.",
+      "signIn": "Sign in",
+      "invalidTitle": "This link is invalid or has expired",
+      "requestNew": "Request a new link",
+      "errors": {
+        "passwordRequired": "Enter a password",
+        "passwordMin": "Use at least 8 characters",
+        "passwordMax": "Use at most 128 characters",
+        "passwordWeak": "Include at least one letter and one number",
+        "confirmRequired": "Confirm your password",
+        "mismatch": "Passwords do not match",
+        "invalidToken": "This link is invalid or has expired",
+        "invalidInput": "Check your details and try again",
+        "unknown": "Something went wrong. Try again"
+      }
     }
   }
 }

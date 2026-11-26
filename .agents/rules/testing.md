@@ -18,7 +18,7 @@ Pruebas unitarias con **Vitest** (entorno `jsdom`) y **Testing Library** (`@test
 - Las interacciones se hacen con `userEvent`, no con `fireEvent`.
 - Los datos de prueba salen de factories en `src/test/factories/`, tipadas con el contrato de la API.
 - La fecha actual se fija con `vi.useFakeTimers().setSystemTime(...)`; un test nunca depende de la hora real. El huso horario de las pruebas es UTC (`vitest.config.mts`).
-- Solo se mockea la frontera: `@/lib/api-client`, `next/cache`, `next/navigation`, `next/headers`. La lógica propia no se mockea.
+- Solo se mockea la frontera: `@/lib/api-client`, `next/cache`, `next/navigation`, `next/headers`, las Server Actions vistas desde un componente cliente (en la app real son una llamada al servidor) y las imágenes importadas, que en Vitest no traen tamaño. La lógica propia no se mockea. La action se prueba aparte, sin mockearla.
 - Un test que falla no se borra ni se salta (`it.skip`) para poder commitear. Un comportamiento que se sabe incorrecto se deja como `it.fails(...)` y se anota en el tópico del flujo.
 - Un test no puede dejar `console.error` en la salida: se arregla la causa.
 

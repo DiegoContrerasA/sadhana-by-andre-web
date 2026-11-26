@@ -14,7 +14,7 @@ Queda para después, junto con la ficha 03: Better Auth, sesión y redirección,
 
 ## Ruta y pantalla
 
-- Ruta: `/sign-in` → `LoginScreen` en `features/auth/screens/login-screen.tsx`.
+- Ruta: `/sign-in` → `SignInScreen` en `features/auth/screens/sign-in-screen.tsx`.
 - Contenido: `AuthCard` con título "Bienvenida de nuevo" (texto final por revisar), formulario, enlace "¿Olvidaste tu contraseña?" y enlace "Crear cuenta".
 
 ## Campos
@@ -65,7 +65,7 @@ En login **no** se validan reglas de complejidad de la contraseña (solo que no 
 - [ ] Action `sign-in`
 - [ ] Hook `use-sign-in-form`
 - [ ] Componente `SignInForm`
-- [ ] `LoginScreen` y ruta `/sign-in`
+- [ ] `SignInScreen` y ruta `/sign-in`
 - [ ] `loading.tsx` / `error.tsx` si aplica
 - [ ] Botón de cerrar sesión (action `sign-out`) para poder probar el ciclo
 - [ ] Pruebas

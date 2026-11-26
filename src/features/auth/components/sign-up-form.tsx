@@ -10,8 +10,9 @@ import { SubmitButton } from "@/components/form/submit-button"
 import { TextField } from "@/components/form/text-field"
 import { GoogleButton } from "@/components/google-button"
 import { FieldSeparator } from "@/components/ui/field"
+import { useIsHydrated } from "@/hooks/use-is-hydrated"
 
-import { useSignUp } from "../hooks/use-sign-up"
+import { useSignUpForm } from "../hooks/use-sign-up-form"
 import { AuthLink } from "./auth-link"
 
 type SignUpFormProps = {
@@ -20,8 +21,9 @@ type SignUpFormProps = {
 
 export function SignUpForm({ signInHref }: SignUpFormProps) {
   const t = useTranslations("auth.signUp")
-  const form = useSignUp()
+  const form = useSignUpForm()
   const isBusy = form.pendingMethod !== null
+  const isHydrated = useIsHydrated()
 
   return (
     <div className="flex flex-col gap-8">
@@ -35,6 +37,7 @@ export function SignUpForm({ signInHref }: SignUpFormProps) {
       </GoogleButton>
       <FieldSeparator>{t("separator")}</FieldSeparator>
       <form
+        method="post"
         noValidate
         autoComplete="off"
         onSubmit={form.submit}
@@ -91,10 +94,11 @@ export function SignUpForm({ signInHref }: SignUpFormProps) {
           hideLabel={t("hidePassword")}
           autoComplete="new-password"
         />
-        <FormError message={form.errorMessage} />
+        <FormError message={form.errorMessage} shouldFocus />
         <FormSuccess message={form.isSuccess ? t("success") : undefined} />
         <SubmitButton
           size="lg"
+          disabled={!isHydrated || isBusy}
           isPending={form.pendingMethod === "email"}
           pendingLabel={t("pending")}
         >

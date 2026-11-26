@@ -57,7 +57,7 @@ Por defecto no hay cuerpo: el commit es directo y se entiende solo con el encabe
 
 ## Ramas
 
-Se parte de `main`. Nombres: `feature/<slug-kebab>` y `fix/<slug-kebab>`.
+Por ahora todo va directo a `main`: no se crean ramas ni pull requests. Se revisará cuando el sitio esté en producción.
 
 ## Atribución
 

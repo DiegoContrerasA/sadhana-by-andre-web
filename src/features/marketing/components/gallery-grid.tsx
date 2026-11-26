@@ -17,9 +17,10 @@ export type GalleryPhoto = {
 
 type GalleryGridProps = {
   photos: GalleryPhoto[]
+  viewerLabels: Record<string, string>
 }
 
-export function GalleryGrid({ photos }: GalleryGridProps) {
+export function GalleryGrid({ photos, viewerLabels }: GalleryGridProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
@@ -37,6 +38,7 @@ export function GalleryGrid({ photos }: GalleryGridProps) {
       {openIndex === null ? null : (
         <GalleryLightbox
           photos={photos}
+          labels={viewerLabels}
           index={openIndex}
           onClose={() => setOpenIndex(null)}
         />

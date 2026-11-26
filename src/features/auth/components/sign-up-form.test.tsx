@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { act, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { NextIntlClientProvider } from "next-intl"
 import { beforeEach, describe, expect, it, vi } from "vitest"
@@ -84,5 +84,17 @@ describe("SignUpForm", () => {
       "href",
       "/sign-in",
     )
+  })
+
+  it("does not mark a new email as taken when it changed meanwhile", async () => {
+    const response = Promise.withResolvers<Awaited<ReturnType<typeof signUp>>>()
+    vi.mocked(signUp).mockReturnValue(response.promise)
+    renderForm()
+    await fillAndSubmit()
+
+    await userEvent.type(screen.getByLabelText(copy.email), ".co")
+    await act(async () => response.resolve({ ok: false, error: "emailTaken" }))
+
+    expect(screen.queryByText(copy.errors.emailTaken)).toBeNull()
   })
 })

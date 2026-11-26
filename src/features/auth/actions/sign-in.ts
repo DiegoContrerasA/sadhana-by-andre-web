@@ -1,6 +1,6 @@
 "use server"
 
-import { findMockUser } from "../data/find-mock-user"
+import { getMockUser } from "../data/get-mock-user"
 import { signInSchema } from "../schema/sign-in.schema"
 import type { AuthResult } from "./auth-result"
 
@@ -9,7 +9,7 @@ export async function signIn(
 ): Promise<AuthResult<"invalidCredentials">> {
   const parsed = signInSchema.safeParse(input)
   if (!parsed.success) return { ok: false, error: "invalidCredentials" }
-  if (!findMockUser(parsed.data)) {
+  if (!getMockUser(parsed.data)) {
     return { ok: false, error: "invalidCredentials" }
   }
 
