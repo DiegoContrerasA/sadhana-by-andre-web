@@ -13,7 +13,7 @@ Pantalla de inicio de sesión con correo y contraseña, y acceso con Google. Tod
 | `/forgot-password`, `/en/forgot-password` | `(auth)/forgot-password/page.tsx` | `ForgotPasswordScreen` |
 | `/reset-password?token=…`, `/en/reset-password?token=…` | `(auth)/reset-password/page.tsx` | `ResetPasswordScreen` |
 
-`(auth)/layout.tsx` monta `AuthLayout` para todas las páginas de auth: formulario a la izquierda y foto a la derecha, a pantalla completa. No hay logo ni enlace a la portada. La foto no lleva texto y tiene una capa del color de la marca y un degradado oscuro en la parte baja, sin desenfoque. Por debajo de `lg` solo se ve el formulario. Una página nueva del flujo se crea dentro de `(auth)` y solo entrega su título y formulario.
+`(auth)/layout.tsx` monta `AuthLayout` para todas las páginas de auth: formulario a la izquierda y foto a la derecha, a pantalla completa. El panel del formulario usa el crema `secondary`, como la landing y la app. No hay logo ni enlace a la portada. La foto no lleva texto y tiene una capa del color de la marca y un degradado oscuro en la parte baja, sin desenfoque. Por debajo de `lg` solo se ve el formulario. Una página nueva del flujo se crea dentro de `(auth)` y solo entrega su título y formulario.
 
 ## Flujo
 

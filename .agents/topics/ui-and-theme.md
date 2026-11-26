@@ -32,6 +32,9 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 - Las primitivas de `components/ui/` las genera el CLI e importan `cn` del paquete `cn`. Biome desactiva para esa carpeta `noLabelWithoutControl` (`Label` es un wrapper; la asociación se hace donde se usa), `useKeyWithClickEvents` (el addon de `InputGroup` enfoca el input al hacer clic) y `noDoubleEquals` (código del CLI).
 - Los formularios llevan `noValidate` para que los errores los muestre el schema de `zod` y no el navegador.
 - Ajustes de marca en primitivas (hay que repetirlos si el CLI las regenera): `Button` suma las variantes `outline-primary`, `inverse`, `outline-inverse`, `ghost-inverse` y el tamaño `pill`; `Badge` suma `soft`, `outline-inverse` y los tamaños `lg` y `label`; `Accordion` usa ícono de más y menos y la tipografía de la marca; `Sheet` suma `side="full"`.
+- `InputGroup` tiene fondo `bg-background`, para que los campos se vean blancos sobre superficies crema (ajuste de marca en la primitiva).
+- `--destructive` (modo claro) es un rojo vino, `oklch(0.49 0.14 18)`, acorde a la marca: contraste 6.7:1 sobre blanco y 6.1:1 sobre crema.
+- La variante `outline` de `Button` usa `hover:bg-accent` y borde `primary`: `muted` es el mismo crema del fondo de auth y de la app, y el hover no se veía.
 - Los tokens `--overlay` (negro) y `--overlay-foreground` (blanco) son para texto sobre fotos y para el pie oscuro.
 - La página de inicio es la landing: ver [`marketing.md`](./marketing.md).
 

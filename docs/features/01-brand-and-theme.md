@@ -33,7 +33,7 @@ Se convierten a `oklch` al implementar. Propuesta de roles:
 | `--accent` | `#DFC8CE` |
 | `--muted` | Derivado de crema/neutral |
 | `--border` / `--input` | `#DFC8CE` atenuado |
-| `--destructive` | Se mantiene el rojo de shadcn |
+| `--destructive` | Rojo vino acorde a la marca (`oklch(0.49 0.14 18)`) |
 | Token nuevo `--highlight` | `#C969B7` (rol: acento decorativo; no para texto) |
 
 ### Contraste (WCAG AA, cálculo propio)
