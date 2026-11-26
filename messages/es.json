@@ -315,5 +315,45 @@
     "title": "Página no encontrada",
     "body": "La página que buscas no existe.",
     "cta": "Volver al inicio"
+  },
+  "auth": {
+    "homeLabel": "Volver al inicio",
+    "signIn": {
+      "title": "Iniciar sesión",
+      "google": "Continuar con Google",
+      "googlePending": "Conectando…",
+      "separator": "O ingresa con tu correo",
+      "email": "Correo",
+      "emailPlaceholder": "tu@correo.com",
+      "password": "Contraseña",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "submit": "Iniciar sesión",
+      "pending": "Iniciando sesión…",
+      "success": "Acceso simulado correcto. Todavía no se crea una sesión.",
+      "errors": {
+        "emailRequired": "Ingresa tu correo",
+        "emailInvalid": "Ingresa un correo válido",
+        "passwordRequired": "Ingresa tu contraseña",
+        "invalidCredentials": "Correo o contraseña incorrectos",
+        "unknown": "Algo salió mal. Intenta de nuevo"
+      },
+      "metaTitle": "Iniciar sesión | Sadhana by Andre",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes cuenta?",
+      "createAccount": "Crear cuenta"
+    },
+    "signUp": {
+      "metaTitle": "Crear cuenta | Sadhana by Andre",
+      "title": "Crear cuenta"
+    },
+    "forgotPassword": {
+      "metaTitle": "Recuperar contraseña | Sadhana by Andre",
+      "title": "Recuperar contraseña"
+    },
+    "comingSoon": {
+      "body": "Esta opción estará disponible pronto.",
+      "back": "Volver a iniciar sesión"
+    }
   }
 }

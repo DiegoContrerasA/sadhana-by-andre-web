@@ -1,11 +1,10 @@
-import { SparklesIcon } from "lucide-react"
+import { ArrowUpRightIcon, SparklesIcon } from "lucide-react"
 import Image from "next/image"
 import type { Messages } from "next-intl"
-
+import { LinkButton } from "@/components/link-button"
 import { Badge } from "@/components/ui/badge"
-
 import backgroundImage from "../assets/cta.jpeg"
-import { TrialClassActions } from "./trial-class-actions"
+import { getWhatsappUrl } from "../utils/whatsapp-url"
 
 type TrialClassSectionProps = {
   cta: Messages["cta"]
@@ -40,7 +39,19 @@ export function TrialClassSection({ cta }: TrialClassSectionProps) {
           <em className="italic">{cta.headingEm}</em>
         </h2>
         <p className="max-w-lg leading-relaxed md:text-lg">{cta.body}</p>
-        <TrialClassActions cta={cta} />
+        <div className="flex flex-col items-center gap-4 sm:flex-row">
+          <LinkButton
+            href={getWhatsappUrl(cta.waMessage)}
+            isExternal
+            variant="inverse"
+          >
+            {cta.primaryBtn}
+            <ArrowUpRightIcon aria-hidden="true" className="size-4" />
+          </LinkButton>
+          <LinkButton href="#servicios" variant="outline-inverse">
+            {cta.secondaryBtn}
+          </LinkButton>
+        </div>
       </div>
     </section>
   )

@@ -56,8 +56,8 @@ Las contraseñas de prueba viven solo en el mock y se hashean al sembrar.
 
 - Sesión por cookie `httpOnly` (la gestiona Better Auth).
 - `getSession()` en `features/auth/data/`, usado por las pantallas en el servidor.
-- Rutas públicas de auth en el grupo `src/app/(auth)/`: `/iniciar-sesion`, `/crear-cuenta`, `/recuperar-contrasena`, `/restablecer-contrasena`.
-- Si ya hay sesión, esas rutas redirigen a `/`; las zonas privadas (`(app)`) redirigen a `/iniciar-sesion`. Se decide en el `layout.tsx` del grupo, no en middleware, por ahora.
+- Rutas públicas de auth en el grupo `src/app/(auth)/`: `/sign-in`, `/sign-up`, `/forgot-password`, `/reset-password`.
+- Si ya hay sesión, esas rutas redirigen a `/`; las zonas privadas (`(app)`) redirigen a `/sign-in`. Se decide en el `layout.tsx` del grupo, no en middleware, por ahora.
 - Destino tras iniciar sesión: `/` (parámetro `redirectTo` validado: solo rutas internas).
 
 ## Contrato de errores (acciones)

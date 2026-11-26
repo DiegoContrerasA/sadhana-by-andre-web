@@ -4,7 +4,7 @@ Estado: ⬜ · Fase 3 · Depende de 04
 
 ## Ruta y pantalla
 
-- Ruta: `/crear-cuenta` → `RegisterScreen`.
+- Ruta: `/sign-up` → `RegisterScreen`.
 - `AuthCard` con título "Crea tu cuenta", formulario y enlace "¿Ya tienes cuenta? Inicia sesión".
 
 ## Campos
@@ -70,7 +70,7 @@ Política de contraseña propuesta: longitud antes que complejidad, sin exigir s
 - [ ] Action `sign-up`
 - [ ] Hook `use-sign-up-form`
 - [ ] Componente `SignUpForm`
-- [ ] `RegisterScreen` y ruta `/crear-cuenta`
+- [ ] `RegisterScreen` y ruta `/sign-up`
 - [ ] Páginas o enlaces de términos y privacidad (placeholder)
 - [ ] Pruebas
 - [ ] Actualizar tópico `auth.md`

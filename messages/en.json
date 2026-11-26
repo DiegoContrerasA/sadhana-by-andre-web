@@ -315,5 +315,45 @@
     "title": "Page not found",
     "body": "The page you are looking for does not exist.",
     "cta": "Back to home"
+  },
+  "auth": {
+    "homeLabel": "Back to home",
+    "signIn": {
+      "title": "Sign in",
+      "google": "Continue with Google",
+      "googlePending": "Connecting…",
+      "separator": "Or sign in with your email",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "password": "Password",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "submit": "Sign in",
+      "pending": "Signing in…",
+      "success": "Simulated sign-in succeeded. No session is created yet.",
+      "errors": {
+        "emailRequired": "Enter your email",
+        "emailInvalid": "Enter a valid email",
+        "passwordRequired": "Enter your password",
+        "invalidCredentials": "Wrong email or password",
+        "unknown": "Something went wrong. Try again"
+      },
+      "metaTitle": "Sign in | Sadhana by Andre",
+      "forgotPassword": "Forgot your password?",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account"
+    },
+    "signUp": {
+      "metaTitle": "Create account | Sadhana by Andre",
+      "title": "Create account"
+    },
+    "forgotPassword": {
+      "metaTitle": "Recover password | Sadhana by Andre",
+      "title": "Recover password"
+    },
+    "comingSoon": {
+      "body": "This option will be available soon.",
+      "back": "Back to sign in"
+    }
   }
 }

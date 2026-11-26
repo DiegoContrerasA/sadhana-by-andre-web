@@ -47,7 +47,7 @@ El límite incluye imports y tipos. No aplica a `src/app/globals.css` ni a `src/
 
 Además:
 
-- Una función o componente no supera las 40 líneas de cuerpo.
+- Una función no supera las 40 líneas de cuerpo. En un componente ese límite aplica a la lógica: una vista que es sobre todo JSX (un formulario, una sección) no se divide solo por su largo. Respeta el máximo de líneas del archivo, y un subcomponente se separa cuando se reutiliza, es interactivo o tiene una responsabilidad propia.
 - Un componente no recibe más de 8 props. Si necesita más, se resuelve con composición (`children`, componentes compuestos), no con más props.
 - El JSX no supera 5 niveles de anidación. Si los supera, extrae un componente.
 
@@ -82,6 +82,7 @@ Las reglas de tipado (configuración estricta, `type` vs `interface`, lo prohibi
 
 ## Naming
 
+- Las rutas (URLs) van siempre en inglés y kebab-case, en todos los idiomas: `/sign-in`, `/forgot-password`.
 - Archivos y carpetas en kebab-case: `pose-card.tsx`, `get-pose.ts`, `format-duration.ts`.
 - Hooks con prefijo `use-`: `use-trial-unlock-form.ts` exporta `useTrialUnlockForm`.
 - Lecturas con verbo `get`: `data/get-pose.ts` exporta `getPose`.

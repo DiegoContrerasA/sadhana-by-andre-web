@@ -1,10 +1,20 @@
 # 04 · Auth: iniciar sesión
 
-Estado: ⬜ · Fase 2 · Depende de 02 y 03
+Estado: 🟨 · Fase 2 · Primera entrega en revisión
+
+## Primera entrega (mock)
+
+Pedido del usuario: login con diseño de dos columnas, responsive, solo correo y contraseña, validaciones básicas y Google simulado, con un layout compartido para todo el flujo de auth.
+
+Ajustes pedidos en la revisión: título "Iniciar sesión", más espacio, enlaces a `/sign-up` y `/forgot-password` (páginas provisionales), pantalla completa, foto sin texto y con capa de color, y sin autorrelleno (reemplaza el `autoComplete` de la tabla de campos).
+
+Incluye: layout `(auth)`, pantalla `/sign-in` en `es` y `en`, schema, actions simuladas y pruebas.
+
+Queda para después, junto con la ficha 03: Better Auth, sesión y redirección, "recordarme", límite de intentos, cerrar sesión y los enlaces a crear cuenta y recuperar contraseña. Lo descrito abajo es el objetivo completo.
 
 ## Ruta y pantalla
 
-- Ruta: `/iniciar-sesion` → `LoginScreen` en `features/auth/screens/login-screen.tsx`.
+- Ruta: `/sign-in` → `LoginScreen` en `features/auth/screens/login-screen.tsx`.
 - Contenido: `AuthCard` con título "Bienvenida de nuevo" (texto final por revisar), formulario, enlace "¿Olvidaste tu contraseña?" y enlace "Crear cuenta".
 
 ## Campos
@@ -55,7 +65,7 @@ En login **no** se validan reglas de complejidad de la contraseña (solo que no 
 - [ ] Action `sign-in`
 - [ ] Hook `use-sign-in-form`
 - [ ] Componente `SignInForm`
-- [ ] `LoginScreen` y ruta `/iniciar-sesion`
+- [ ] `LoginScreen` y ruta `/sign-in`
 - [ ] `loading.tsx` / `error.tsx` si aplica
 - [ ] Botón de cerrar sesión (action `sign-out`) para poder probar el ciclo
 - [ ] Pruebas

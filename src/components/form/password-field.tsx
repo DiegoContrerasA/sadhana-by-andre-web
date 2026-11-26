@@ -30,6 +30,8 @@ type PasswordFieldProps<TFieldValues extends FieldValues> = {
   autoComplete: "current-password" | "new-password"
   description?: string
   placeholder?: string
+  showLabel?: string
+  hideLabel?: string
 }
 
 export function PasswordField<TFieldValues extends FieldValues>({
@@ -39,6 +41,8 @@ export function PasswordField<TFieldValues extends FieldValues>({
   autoComplete,
   description,
   placeholder,
+  showLabel = "Mostrar contraseña",
+  hideLabel = "Ocultar contraseña",
 }: PasswordFieldProps<TFieldValues>) {
   const id = useId()
   const [isVisible, setIsVisible] = useState(false)
@@ -62,7 +66,7 @@ export function PasswordField<TFieldValues extends FieldValues>({
           <InputGroupButton
             type="button"
             size="icon-xs"
-            aria-label={isVisible ? "Ocultar contraseña" : "Mostrar contraseña"}
+            aria-label={isVisible ? hideLabel : showLabel}
             aria-pressed={isVisible}
             onClick={() => setIsVisible((current) => !current)}
           >

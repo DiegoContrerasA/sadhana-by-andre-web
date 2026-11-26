@@ -1,10 +1,11 @@
 import Image from "next/image"
 import type { Messages } from "next-intl"
-
+import { LinkButton } from "@/components/link-button"
+import { kobidoBookingUrl } from "@/constants/site"
 import kobidoImage from "../assets/kobido.png"
+import { getWhatsappUrl } from "../utils/whatsapp-url"
 import { BenefitList } from "./benefit-list"
 import { FaceCareSection } from "./face-care-section"
-import { KobidoBooking } from "./kobido-booking"
 
 type KobidoSectionProps = {
   kobido: Messages["kobido"]
@@ -33,7 +34,20 @@ export function KobidoSection({ kobido }: KobidoSectionProps) {
         {kobido.body}
       </p>
       <BenefitList benefits={kobido.benefits} />
-      <KobidoBooking kobido={kobido} />
+      <div className="flex flex-col items-start gap-4">
+        <LinkButton href={kobidoBookingUrl} isExternal>
+          {kobido.cta}
+        </LinkButton>
+        <span className="text-sm text-muted-foreground">{kobido.ctaSub}</span>
+        <a
+          href={getWhatsappUrl(kobido.waMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-primary underline underline-offset-4"
+        >
+          {kobido.ctaWhatsApp}
+        </a>
+      </div>
     </FaceCareSection>
   )
 }

@@ -42,3 +42,5 @@ Si un paso falla, el commit se cancela y el hook muestra el comando para reprodu
 ## Archivos clave
 
 `biome.json`, `eslint.config.mjs`, `vitest.config.mts`, `commitlint.config.mjs`, `.husky/`, `src/test/setup.ts`.
+
+Vitest reemplaza `server-only` por `src/test/server-only.ts` (alias en `vitest.config.mts`), porque ese módulo lo resuelve Next.

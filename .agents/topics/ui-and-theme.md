@@ -13,6 +13,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 | Fuentes | `app/globals.css` | Pila de fuentes del sistema (`ui-sans-serif, system-ui`), igual que sadhanabyandre.com: no se descarga ninguna fuente. `--font-heading` apunta a `--font-sans`. Los `h1` a `h4` salen en `font-light` por defecto |
 | Marca | `public/brand/`, `public/og.png`, `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png` | Logo blanco, imagen Open Graph e íconos tomados del sitio `sadhanabyandre` |
 | `cn` | `lib/utils.ts` | Combina clases (reexporta el paquete `cn`) |
+| Google | `components/google-button.tsx` | `GoogleButton`: botón de acceso con Google, con estado cargando. Solo presenta; la acción llega por `onClick` |
 | Enlaces | `components/link-button.tsx` | `LinkButton`: enlace con las variantes de `Button` |
 | Primitivas | `components/ui/` | `accordion`, `badge`, `sheet`, `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
 | Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando) y `FormError` |

@@ -3,7 +3,7 @@
 Cómo una ruta de `src/app/` consume una pantalla. Reglas en [`../architecture.md`](../architecture.md); la feature de ejemplo está en [`feature.md`](./feature.md).
 
 ```
-src/app/(marketing)/posturas/
+src/app/(marketing)/poses/
 ├── page.tsx
 ├── loading.tsx
 ├── error.tsx
@@ -19,7 +19,7 @@ La ruta renderiza la pantalla y decide la navegación. No tiene estilos de layou
 import { PosesScreen } from "@/features/catalog/server"
 
 export default function PosesPage() {
-  return <PosesScreen poseHref={(slug) => `/posturas/${slug}`} />
+  return <PosesScreen poseHref={(slug) => `/poses/${slug}`} />
 }
 ```
 
@@ -32,10 +32,10 @@ import { PoseDetailScreen } from "@/features/catalog/server"
 
 export default async function PoseDetailPage({
   params,
-}: PageProps<"/posturas/[slug]">) {
+}: PageProps<"/poses/[slug]">) {
   const { slug } = await params
 
-  return <PoseDetailScreen slug={slug} backHref="/posturas" />
+  return <PoseDetailScreen slug={slug} backHref="/poses" />
 }
 ```
 

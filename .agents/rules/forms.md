@@ -16,7 +16,7 @@ Todo formulario usa `react-hook-form` con un schema de `zod` conectado por `@hoo
 
 - Un schema por formulario, declarado a nivel de módulo.
 - El tipo de los valores se deriva con `z.infer` y se exporta junto al schema.
-- Los mensajes de error se escriben en el schema. Mientras no haya i18n, van en español; cuando se configure, serán claves de traducción.
+- Los mensajes de error vienen de `messages/`. El schema se crea con una función que los recibe (`createSignInSchema`), y el hook los lee con `useTranslations`. El formulario y su hook leen sus textos directamente: no se pasan por props. El layout que contiene formularios monta `NextIntlClientProvider` solo con los textos que necesitan.
 - El schema valida lo que el usuario escribe. Si el body del endpoint tiene otra forma, la conversión la hace la action.
 - Si el contrato de la API ya define un schema equivalente, se reutiliza o se extiende en lugar de duplicarlo.
 

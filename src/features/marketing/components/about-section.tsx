@@ -2,13 +2,14 @@ import Image from "next/image"
 import type { Messages } from "next-intl"
 
 import aboutImage from "../assets/about.jpeg"
-import { AboutStory } from "./about-story"
 
 type AboutSectionProps = {
   about: Messages["about"]
 }
 
 export function AboutSection({ about }: AboutSectionProps) {
+  const paragraphs = [about.p1, about.p2, about.p3, about.p4]
+
   return (
     <section
       id="sobre-mi"
@@ -37,7 +38,14 @@ export function AboutSection({ about }: AboutSectionProps) {
               <em className="text-primary italic">{about.headingEm}</em>
             </h2>
           </div>
-          <AboutStory about={about} />
+          <div className="flex flex-col gap-5 leading-relaxed">
+            {paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+            <blockquote className="border-l-2 border-primary pl-5 text-lg leading-snug font-light text-primary italic md:text-xl">
+              <p>{about.quote}</p>
+            </blockquote>
+          </div>
           <div aria-hidden="true" className="h-px w-10 bg-primary" />
         </div>
       </div>

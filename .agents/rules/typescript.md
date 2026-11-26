@@ -100,6 +100,6 @@ export type TrialUnlockValues = z.infer<typeof trialUnlockSchema>
 
 ## Next.js
 
-- Las props de rutas usan los helpers globales que genera Next: `PageProps<"/posturas/[slug]">`, `LayoutProps<"/">`. `npm run typecheck` los regenera con `next typegen`.
+- Las props de rutas usan los helpers globales que genera Next: `PageProps<"/poses/[slug]">`, `LayoutProps<"/">`. `npm run typecheck` los regenera con `next typegen`.
 - `params` y `searchParams` son promesas: se esperan con `await`.
 - Los `searchParams` se validan con `zod` antes de usarlos.

@@ -6,7 +6,7 @@ Dos pantallas: solicitar el enlace y restablecer con el token.
 
 ## Pantalla A: solicitar enlace
 
-- Ruta: `/recuperar-contrasena` → `ForgotPasswordScreen`.
+- Ruta: `/forgot-password` → `ForgotPasswordScreen`.
 - Texto: explica que se enviará un enlace si el correo existe.
 
 | Campo | Componente | `type` | `autoComplete` | Obligatorio |
@@ -17,14 +17,14 @@ Validaciones (`forgot-password.schema.ts`): correo requerido ("Ingresa tu correo
 
 Flujo:
 
-1. Action `requestPasswordReset` valida y pide a Better Auth el restablecimiento con `redirectTo` hacia `/restablecer-contrasena`.
+1. Action `requestPasswordReset` valida y pide a Better Auth el restablecimiento con `redirectTo` hacia `/reset-password`.
 2. **Siempre** responde éxito, exista o no el correo.
 3. La pantalla muestra confirmación: "Si el correo está registrado, te enviamos un enlace para restablecer tu contraseña" y un enlace "Volver a iniciar sesión".
 4. Mock: el enlace llega a la bandeja `/dev/mailbox` en lugar de a un correo real.
 
 ## Pantalla B: restablecer
 
-- Ruta: `/restablecer-contrasena?token=...` → `ResetPasswordScreen`.
+- Ruta: `/reset-password?token=...` → `ResetPasswordScreen`.
 - Si falta el token o es inválido, se muestra un estado de error con acción "Solicitar un nuevo enlace".
 
 | Campo | Componente | `type` | `autoComplete` | Obligatorio |
@@ -39,7 +39,7 @@ Validaciones (`reset-password.schema.ts`): mismas reglas de contraseña que el r
 Flujo:
 
 1. Action `resetPassword` valida y llama a Better Auth con el token y la nueva contraseña.
-2. Éxito → mensaje "Tu contraseña se actualizó" y redirección a `/iniciar-sesion`. No se abre sesión automáticamente.
+2. Éxito → mensaje "Tu contraseña se actualizó" y redirección a `/sign-in`. No se abre sesión automáticamente.
 3. Se invalidan las sesiones anteriores del usuario (a confirmar con el comportamiento de Better Auth).
 
 ## Errores
@@ -66,7 +66,7 @@ Flujo:
 - [ ] `forgot-password.schema.ts` y `reset-password.schema.ts`
 - [ ] Actions `request-password-reset` y `reset-password`
 - [ ] Hooks y formularios de ambas pantallas
-- [ ] Pantallas y rutas `/recuperar-contrasena` y `/restablecer-contrasena`
+- [ ] Pantallas y rutas `/forgot-password` y `/reset-password`
 - [ ] Estado de confirmación y estado de token inválido
 - [ ] Bandeja mock `/dev/mailbox` con el enlace
 - [ ] Pruebas
