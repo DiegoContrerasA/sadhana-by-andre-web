@@ -101,7 +101,7 @@ Reglas sin excepción (las que dicen **Biome** fallan en el lint):
 - Nadie importa de `src/app/`. **Biome**
 - Las carpetas compartidas nunca importan de `features/`. **Biome**
 - Una feature importa de otra solo por `@/features/{dominio}` o `@/features/{dominio}/server`. **Biome**
-- `useRouter`, `usePathname` y `useSearchParams` se usan solo en `src/app/`; las features reciben `href` o callbacks. **Biome**. Una Server Action puede llamar a `redirect()` cuando el flujo lo exige (por ejemplo, tras iniciar sesión o abrir el checkout). `notFound()` se permite en `data/` y en pantallas.
+- `useRouter`, `usePathname` y `useSearchParams` se usan solo en `src/app/`; las features reciben `href` o callbacks. La única excepción es `NavLink` (`src/components/nav-link.tsx`), que usa el `usePathname` de `@/i18n/navigation` para marcar el enlace actual: un menú usa `NavLink` y no calcula la sección activa. **Biome**. Una Server Action puede llamar a `redirect()` cuando el flujo lo exige (por ejemplo, tras iniciar sesión o abrir el checkout). `notFound()` se permite en `data/` y en pantallas.
 - El cliente de la API se importa solo en `data/` y `actions/`.
 - Un Client Component nunca importa de `server.ts` ni de `data/`.
 

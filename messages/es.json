@@ -445,5 +445,42 @@
       "validating": "Validando tu enlace…",
       "validatingHint": "Esto tomará solo un momento."
     }
+  },
+  "app": {
+    "navLabel": "Menú principal",
+    "nav": {
+      "courses": "Explorar",
+      "myCourses": "Mis cursos",
+      "favorites": "Favoritos",
+      "profile": "Perfil"
+    },
+    "comingSoon": "Esta sección está en construcción.",
+    "sections": {
+      "courses": {
+        "title": "Cursos",
+        "subtitle": "Encuentra tu próxima práctica.",
+        "heading": "Encuentra",
+        "headingEm": "tu práctica"
+      },
+      "myCourses": {
+        "title": "Mis cursos",
+        "subtitle": "Continúa donde quedaste.",
+        "heading": "Continúa",
+        "headingEm": "tu camino"
+      },
+      "favorites": {
+        "title": "Favoritos",
+        "subtitle": "Lo que guardaste para volver.",
+        "heading": "Tus prácticas",
+        "headingEm": "favoritas"
+      },
+      "profile": {
+        "title": "Perfil",
+        "subtitle": "Tu cuenta y preferencias.",
+        "heading": "Tu",
+        "headingEm": "espacio"
+      }
+    },
+    "homeLabel": "Sadhana by Andre"
   }
 }

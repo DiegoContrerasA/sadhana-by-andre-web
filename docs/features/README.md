@@ -32,6 +32,7 @@ Las tareas dentro de cada ficha son checklists (`- [ ]` / `- [x]`). Una ficha pa
 | 06 | [Auth: recuperar contraseña](./06-auth-password-recovery.md) | 4 | 🟨 |
 | 07 | [Calidad: commits, hooks, lint y pruebas](./07-quality-tooling.md) | transversal | 🟨 |
 | 08 | [Web pública: migración desde Astro](./08-public-site-migration.md) | web pública | 🟨 |
+| 09 | [App de cursos](./09-app-courses.md) | app | 🟨 |
 
 ## Fases
 
