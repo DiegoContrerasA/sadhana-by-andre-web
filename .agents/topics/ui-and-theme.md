@@ -16,7 +16,7 @@ Define la base visual de la web: primitivas de shadcn sobre Base UI, tokens de c
 | Google | `components/google-button.tsx` | `GoogleButton`: botón de acceso con Google, con estado cargando. Solo presenta; la acción llega por `onClick` |
 | Enlaces | `components/link-button.tsx` | `LinkButton`: enlace con las variantes de `Button` |
 | Primitivas | `components/ui/` | `accordion`, `badge`, `sheet`, `alert`, `alert-dialog`, `button`, `checkbox`, `dialog`, `field`, `input`, `input-group`, `label`, `separator`, `textarea` |
-| Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando) y `FormError` |
+| Campos de formulario | `components/form/` | `TextField` (con `icon` opcional), `PasswordField` (mostrar/ocultar), `CheckboxField`, más `SubmitButton` (estado cargando), `FormError` y `FormSuccess` |
 | Catálogo | `app/dev/components` | Página solo de desarrollo (404 en producción) con todos los componentes base (botones, campos, mensajes y modales) y sus estados, armada en `features/dev` |
 
 ## Detalles a tener en cuenta

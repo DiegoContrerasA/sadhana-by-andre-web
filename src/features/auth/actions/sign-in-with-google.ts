@@ -1,7 +1,7 @@
 "use server"
 
-import type { SignInResult } from "./sign-in-result"
+import type { AuthResult } from "./auth-result"
 
-export async function signInWithGoogle(): Promise<SignInResult> {
+export async function signInWithGoogle(): Promise<AuthResult> {
   return { ok: true }
 }

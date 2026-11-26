@@ -317,7 +317,6 @@
     "cta": "Volver al inicio"
   },
   "auth": {
-    "homeLabel": "Volver al inicio",
     "signIn": {
       "title": "Iniciar sesión",
       "google": "Continuar con Google",
@@ -341,11 +340,50 @@
       "metaTitle": "Iniciar sesión | Sadhana by Andre",
       "forgotPassword": "¿Olvidaste tu contraseña?",
       "noAccount": "¿No tienes cuenta?",
-      "createAccount": "Crear cuenta"
+      "createAccount": "Crear cuenta",
+      "passwordPlaceholder": "Tu contraseña"
     },
     "signUp": {
       "metaTitle": "Crear cuenta | Sadhana by Andre",
-      "title": "Crear cuenta"
+      "title": "Crear cuenta",
+      "google": "Continuar con Google",
+      "googlePending": "Conectando…",
+      "separator": "O regístrate con tus datos",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo",
+      "emailPlaceholder": "tu@correo.com",
+      "phone": "Teléfono",
+      "phonePlaceholder": "300 123 4567",
+      "password": "Contraseña",
+      "passwordHint": "Mínimo 8 caracteres, con una letra y un número",
+      "showPassword": "Mostrar contraseña",
+      "hidePassword": "Ocultar contraseña",
+      "submit": "Crear cuenta",
+      "pending": "Creando cuenta…",
+      "success": "Registro simulado correcto. Todavía no se guarda la cuenta.",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "signIn": "Inicia sesión",
+      "errors": {
+        "firstNameRequired": "Ingresa tu nombre",
+        "firstNameLength": "El nombre debe tener entre 2 y 50 caracteres",
+        "lastNameRequired": "Ingresa tu apellido",
+        "lastNameLength": "El apellido debe tener entre 2 y 50 caracteres",
+        "emailRequired": "Ingresa tu correo",
+        "emailInvalid": "Ingresa un correo válido",
+        "phoneRequired": "Ingresa tu teléfono",
+        "phoneInvalid": "Ingresa un teléfono válido",
+        "passwordRequired": "Ingresa una contraseña",
+        "passwordMin": "Usa al menos 8 caracteres",
+        "passwordMax": "Usa máximo 128 caracteres",
+        "passwordWeak": "Incluye al menos una letra y un número",
+        "emailTaken": "Ya existe una cuenta con este correo",
+        "invalidInput": "Revisa los datos e intenta de nuevo",
+        "unknown": "Algo salió mal. Intenta de nuevo"
+      },
+      "firstNamePlaceholder": "Tu nombre",
+      "lastNamePlaceholder": "Tu apellido",
+      "passwordPlaceholder": "Crea tu contraseña"
     },
     "forgotPassword": {
       "metaTitle": "Recuperar contraseña | Sadhana by Andre",

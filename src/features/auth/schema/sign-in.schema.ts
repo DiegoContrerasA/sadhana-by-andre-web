@@ -1,5 +1,7 @@
 import { z } from "zod"
 
+import { createEmailSchema } from "./email.schema"
+
 type SignInSchemaMessages = {
   emailRequired: string
   emailInvalid: string
@@ -8,12 +10,7 @@ type SignInSchemaMessages = {
 
 export function createSignInSchema(messages: SignInSchemaMessages) {
   return z.object({
-    email: z
-      .string()
-      .trim()
-      .toLowerCase()
-      .min(1, messages.emailRequired)
-      .pipe(z.email(messages.emailInvalid)),
+    email: createEmailSchema(messages),
     password: z.string().min(1, messages.passwordRequired),
   })
 }

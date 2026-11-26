@@ -1,6 +1,12 @@
 # 05 · Auth: crear cuenta
 
-Estado: ⬜ · Fase 3 · Depende de 04
+Estado: 🟨 · Fase 3 · Primera entrega en revisión
+
+## Primera entrega (mock)
+
+Campos pedidos por el usuario: nombre, apellido, correo, teléfono y contraseña, más Google simulado. Reemplaza la tabla de campos de abajo: no hay nombre único, confirmación de contraseña ni aceptación de términos.
+
+Queda para después: guardar la cuenta, sesión, límite de intentos y, antes de recoger datos reales, la autorización de tratamiento de datos con enlaces a política y términos.
 
 ## Ruta y pantalla
 

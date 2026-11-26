@@ -317,7 +317,6 @@
     "cta": "Back to home"
   },
   "auth": {
-    "homeLabel": "Back to home",
     "signIn": {
       "title": "Sign in",
       "google": "Continue with Google",
@@ -341,11 +340,50 @@
       "metaTitle": "Sign in | Sadhana by Andre",
       "forgotPassword": "Forgot your password?",
       "noAccount": "Don't have an account?",
-      "createAccount": "Create account"
+      "createAccount": "Create account",
+      "passwordPlaceholder": "Your password"
     },
     "signUp": {
       "metaTitle": "Create account | Sadhana by Andre",
-      "title": "Create account"
+      "title": "Create account",
+      "google": "Continue with Google",
+      "googlePending": "Connecting…",
+      "separator": "Or sign up with your details",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "300 123 4567",
+      "password": "Password",
+      "passwordHint": "At least 8 characters, with a letter and a number",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password",
+      "submit": "Create account",
+      "pending": "Creating account…",
+      "success": "Simulated sign-up succeeded. The account is not saved yet.",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errors": {
+        "firstNameRequired": "Enter your first name",
+        "firstNameLength": "First name must be 2 to 50 characters",
+        "lastNameRequired": "Enter your last name",
+        "lastNameLength": "Last name must be 2 to 50 characters",
+        "emailRequired": "Enter your email",
+        "emailInvalid": "Enter a valid email",
+        "phoneRequired": "Enter your phone number",
+        "phoneInvalid": "Enter a valid phone number",
+        "passwordRequired": "Enter a password",
+        "passwordMin": "Use at least 8 characters",
+        "passwordMax": "Use at most 128 characters",
+        "passwordWeak": "Include at least one letter and one number",
+        "emailTaken": "An account with this email already exists",
+        "invalidInput": "Check your details and try again",
+        "unknown": "Something went wrong. Try again"
+      },
+      "firstNamePlaceholder": "Your first name",
+      "lastNamePlaceholder": "Your last name",
+      "passwordPlaceholder": "Create your password"
     },
     "forgotPassword": {
       "metaTitle": "Recover password | Sadhana by Andre",

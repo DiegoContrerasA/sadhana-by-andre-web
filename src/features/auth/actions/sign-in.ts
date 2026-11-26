@@ -2,9 +2,11 @@
 
 import { findMockUser } from "../data/find-mock-user"
 import { signInSchema } from "../schema/sign-in.schema"
-import type { SignInResult } from "./sign-in-result"
+import type { AuthResult } from "./auth-result"
 
-export async function signIn(input: unknown): Promise<SignInResult> {
+export async function signIn(
+  input: unknown,
+): Promise<AuthResult<"invalidCredentials">> {
   const parsed = signInSchema.safeParse(input)
   if (!parsed.success) return { ok: false, error: "invalidCredentials" }
   if (!findMockUser(parsed.data)) {

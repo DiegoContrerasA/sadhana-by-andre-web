@@ -6,7 +6,7 @@ export function AuthCover() {
   return (
     <div
       aria-hidden="true"
-      className="relative hidden overflow-hidden lg:block"
+      className="relative hidden overflow-hidden lg:sticky lg:top-0 lg:block lg:h-dvh"
     >
       <Image
         src={coverImage}

@@ -3,7 +3,7 @@ import { getMessages } from "next-intl/server"
 import { LinkButton } from "@/components/link-button"
 
 type ComingSoonScreenProps = {
-  page: "signUp" | "forgotPassword"
+  page: "forgotPassword"
   signInHref: string
 }
 

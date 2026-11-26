@@ -9,10 +9,10 @@ Pantalla de inicio de sesión con correo y contraseña, y acceso con Google. Tod
 | URL | Ruta en `src/app/[locale]/` | Pantalla |
 |---|---|---|
 | `/sign-in`, `/en/sign-in` | `(auth)/sign-in/page.tsx` | `SignInScreen` |
-| `/sign-up`, `/en/sign-up` | `(auth)/sign-up/page.tsx` | `ComingSoonScreen` (provisional) |
+| `/sign-up`, `/en/sign-up` | `(auth)/sign-up/page.tsx` | `SignUpScreen` |
 | `/forgot-password`, `/en/forgot-password` | `(auth)/forgot-password/page.tsx` | `ComingSoonScreen` (provisional) |
 
-`(auth)/layout.tsx` monta `AuthLayout` para todas las páginas de auth: formulario a la izquierda y foto a la derecha, a pantalla completa. La foto no lleva texto y tiene una capa del color de la marca y un degradado oscuro en la parte baja, sin desenfoque. Por debajo de `lg` solo se ve el formulario. Una página nueva del flujo se crea dentro de `(auth)` y solo entrega su título y formulario.
+`(auth)/layout.tsx` monta `AuthLayout` para todas las páginas de auth: formulario a la izquierda y foto a la derecha, a pantalla completa. No hay logo ni enlace a la portada. La foto no lleva texto y tiene una capa del color de la marca y un degradado oscuro en la parte baja, sin desenfoque. Por debajo de `lg` solo se ve el formulario. Una página nueva del flujo se crea dentro de `(auth)` y solo entrega su título y formulario.
 
 ## Flujo
 
@@ -22,15 +22,34 @@ Pantalla de inicio de sesión con correo y contraseña, y acceso con Google. Tod
 4. Al tener éxito se muestra un aviso de acceso simulado.
 5. `signInWithGoogle` siempre responde con éxito y no habla con Google.
 
-Mientras hay una petición, los dos botones de envío quedan deshabilitados.
+Mientras hay una petición, el botón de Google se deshabilita. El de envío solo se deshabilita mientras carga su propio envío.
+
+## Flujo de registro
+
+1. `useSignUp` valida nombre, apellido (2 a 50), correo, teléfono (7 a 15 dígitos, `+` opcional; se guardan sin espacios ni guiones) y contraseña (8 a 128, con letra y número).
+2. `signUp` vuelve a validar. Si el correo está en `mock-users.json` devuelve `emailTaken`, que se muestra en el campo de correo.
+3. Al tener éxito muestra un aviso. La cuenta no se guarda, así que no permite iniciar sesión después.
+
+`useAuthRequest` concentra el envío, el estado de carga, el resultado y Google para ambos formularios.
 
 ## Detalles a tener en cuenta
 
-- El correo usa `autocomplete="off"` y la contraseña `new-password` para que el navegador no rellene credenciales guardadas (pedido del usuario). Un navegador o gestor de contraseñas puede ignorarlo; `globals.css` evita el fondo azul del autorrelleno.
+- Los campos usan `autocomplete="off"` y las contraseñas `new-password` para que el navegador no rellene credenciales guardadas (pedido del usuario). Un navegador o gestor de contraseñas puede ignorarlo.
 - El mock no debe presentarse como autenticación real. Se reemplaza según la [ficha 03](../../docs/features/03-auth-foundation.md).
 - La página lleva `noindex` y la landing todavía no la enlaza.
-- No hay límite de intentos ni "recordarme". El login enlaza a crear cuenta y recuperar contraseña, que por ahora solo muestran "Próximamente".
+- No hay límite de intentos ni "recordarme". El login enlaza a crear cuenta y a recuperar contraseña; esta última solo muestra "Próximamente".
 - Los textos viven en `messages/*.json` bajo `auth`.
+
+## Problemas conocidos
+
+Detectados en la revisión de código y todavía sin corregir. Deben resolverse antes de publicar.
+
+- Si se envía un formulario antes de que cargue el JavaScript, el navegador usa GET y los datos, incluida la contraseña, quedan en la URL.
+- Con Google en curso se puede enviar también el formulario.
+- Un aviso de éxito o error anterior permanece cuando el nuevo envío no pasa la validación.
+- El estilo de autorrelleno en `globals.css` no se aplica al fondo de los campos.
+- Si se cambia el correo mientras se espera la respuesta, el error de correo ya registrado aparece sobre el nuevo.
+- La contraseña visible no desactiva mayúsculas ni autocorrección, y el aviso de éxito puede no anunciarse en lectores de pantalla.
 
 ## Archivos clave
 
@@ -38,4 +57,4 @@ Mientras hay una petición, los dos botones de envío quedan deshabilitados.
 
 ## Pruebas
 
-Cubierto: schema, action `signIn` y formulario (validación, error del servidor, fallo de red y Google). Falta: E2E del layout.
+Cubierto: schemas, actions `signIn` y `signUp`, y ambos formularios. Fallo de red y Google solo se prueban en el formulario de inicio de sesión. Falta: E2E del layout.

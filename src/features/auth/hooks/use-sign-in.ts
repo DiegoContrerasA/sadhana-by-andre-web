@@ -1,14 +1,11 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useTranslations } from "next-intl"
-import { useMemo, useState, useTransition } from "react"
+import { useMemo } from "react"
 import { useForm } from "react-hook-form"
 
 import { signIn } from "../actions/sign-in"
-import type { SignInResult } from "../actions/sign-in-result"
-import { signInWithGoogle } from "../actions/sign-in-with-google"
 import { createSignInSchema, type SignInValues } from "../schema/sign-in.schema"
-
-type Method = "email" | "google"
+import { useAuthRequest } from "./use-auth-request"
 
 export function useSignIn() {
   const t = useTranslations("auth.signIn.errors")
@@ -25,31 +22,17 @@ export function useSignIn() {
     resolver: zodResolver(schema),
     defaultValues: { email: "", password: "" },
   })
-  const [isPending, startTransition] = useTransition()
-  const [method, setMethod] = useState<Method>("email")
-  const [result, setResult] = useState<SignInResult | null>(null)
-
-  function run(nextMethod: Method, request: () => Promise<SignInResult>) {
-    setMethod(nextMethod)
-    setResult(null)
-    startTransition(async () => {
-      try {
-        setResult(await request())
-      } catch {
-        setResult({ ok: false, error: "unknown" })
-      }
-    })
-  }
+  const request = useAuthRequest<"invalidCredentials">()
 
   return {
     control,
-    submit: handleSubmit((values) => run("email", () => signIn(values))),
+    submit: handleSubmit((values) => request.submitEmail(() => signIn(values))),
     submitGoogle: () => {
       clearErrors()
-      run("google", signInWithGoogle)
+      request.submitGoogle()
     },
-    pendingMethod: isPending ? method : null,
-    isSuccess: result?.ok === true,
-    errorMessage: result?.ok === false ? t(result.error) : undefined,
+    pendingMethod: request.pendingMethod,
+    isSuccess: request.isSuccess,
+    errorMessage: request.error ? t(request.error) : undefined,
   }
 }

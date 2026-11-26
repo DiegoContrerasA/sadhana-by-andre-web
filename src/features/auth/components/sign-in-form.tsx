@@ -1,14 +1,14 @@
 "use client"
 
-import { CircleCheckIcon, MailIcon } from "lucide-react"
+import { MailIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { FormError } from "@/components/form/form-error"
+import { FormSuccess } from "@/components/form/form-success"
 import { PasswordField } from "@/components/form/password-field"
 import { SubmitButton } from "@/components/form/submit-button"
 import { TextField } from "@/components/form/text-field"
 import { GoogleButton } from "@/components/google-button"
-import { Alert, AlertDescription } from "@/components/ui/alert"
 import { FieldSeparator } from "@/components/ui/field"
 
 import { useSignIn } from "../hooks/use-sign-in"
@@ -59,6 +59,7 @@ export function SignInForm({
           control={form.control}
           name="password"
           label={t("password")}
+          placeholder={t("passwordPlaceholder")}
           showLabel={t("showPassword")}
           hideLabel={t("hidePassword")}
           autoComplete="new-password"
@@ -67,12 +68,7 @@ export function SignInForm({
           {t("forgotPassword")}
         </AuthLink>
         <FormError message={form.errorMessage} />
-        {form.isSuccess ? (
-          <Alert role="status">
-            <CircleCheckIcon aria-hidden="true" />
-            <AlertDescription>{t("success")}</AlertDescription>
-          </Alert>
-        ) : null}
+        <FormSuccess message={form.isSuccess ? t("success") : undefined} />
         <SubmitButton
           size="lg"
           isPending={form.pendingMethod === "email"}
