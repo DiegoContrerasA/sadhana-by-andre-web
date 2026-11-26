@@ -37,7 +37,7 @@ Mientras hay una petición no se puede iniciar otra: Google y el envío quedan d
 
 1. `requestPasswordReset` valida el correo y responde igual exista o no. No se envía ningún correo.
 2. La confirmación muestra un enlace de prueba a `/reset-password` con el token de `lib/auth/mock-reset-token.json`.
-La ruta lee `searchParams` y su `loading.tsx` cubre la espera.
+La ruta lee `searchParams` y su `loading.tsx` cubre la espera con `ResetLinkLoading` ("Validando tu enlace…").
 3. Sin ese token, la pantalla muestra enlace inválido y permite pedir otro.
 4. `resetPassword` revisa el token y vuelve a validar. La contraseña usa `createPasswordSchema`, el mismo del registro, y debe coincidir con la confirmación. No se guarda nada.
 

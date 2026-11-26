@@ -1,5 +1,6 @@
 import "server-only"
 
+export { ResetLinkLoading } from "./components/reset-link-loading"
 export { getAuthMetadata } from "./data/get-auth-metadata"
 export { getMockResetHref } from "./data/get-mock-reset-href"
 export { AuthLayout } from "./screens/auth-layout"

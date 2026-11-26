@@ -441,7 +441,9 @@
         "invalidToken": "El enlace no es válido o ya venció",
         "invalidInput": "Revisa los datos e intenta de nuevo",
         "unknown": "Algo salió mal. Intenta de nuevo"
-      }
+      },
+      "validating": "Validando tu enlace…",
+      "validatingHint": "Esto tomará solo un momento."
     }
   }
 }

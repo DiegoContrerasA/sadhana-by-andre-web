@@ -441,7 +441,9 @@
         "invalidToken": "This link is invalid or has expired",
         "invalidInput": "Check your details and try again",
         "unknown": "Something went wrong. Try again"
-      }
+      },
+      "validating": "Validating your link…",
+      "validatingHint": "This will only take a moment."
     }
   }
 }
