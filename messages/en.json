@@ -457,10 +457,10 @@
     "comingSoon": "This section is under construction.",
     "sections": {
       "courses": {
-        "title": "Courses",
-        "subtitle": "Find your next practice.",
-        "heading": "Find",
-        "headingEm": "your practice"
+        "title": "Poses",
+        "subtitle": "Learn each pose step by step and practice at your own pace.",
+        "heading": "Perfect",
+        "headingEm": "your pose"
       },
       "myCourses": {
         "title": "My courses",
@@ -482,5 +482,21 @@
       }
     },
     "homeLabel": "Sadhana by Andre"
+  },
+  "catalog": {
+    "search": {
+      "label": "Search poses",
+      "placeholder": "Search poses",
+      "submit": "Search"
+    },
+    "levels": {
+      "label": "Level",
+      "all": "All levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "clear": "Clear filters",
+    "listSoon": "The list of poses comes in the next phase."
   }
 }

@@ -2,11 +2,11 @@
 
 ## Qué hace
 
-Estructura de la zona de cursos: menú superior en escritorio y barra inferior en celular. Las secciones están vacías.
+Estructura de la zona de cursos: menú superior en escritorio y barra inferior en celular. Las secciones están vacías, salvo `/courses`, que tiene filtros (ver [`catalog.md`](./catalog.md)).
 
 ## Pantallas y rutas
 
-`/courses`, `/my-courses`, `/favorites` y `/profile` (con `/en`), dentro de `app/[locale]/(app)/`. Todas usan `SectionScreen`.
+`/courses`, `/my-courses`, `/favorites` y `/profile` (con `/en`), dentro de `app/[locale]/(app)/`. `/courses` usa `CoursesScreen`; las demás, `SectionScreen`.
 
 ## Detalles a tener en cuenta
 

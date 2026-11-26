@@ -457,10 +457,10 @@
     "comingSoon": "Esta sección está en construcción.",
     "sections": {
       "courses": {
-        "title": "Cursos",
-        "subtitle": "Encuentra tu próxima práctica.",
-        "heading": "Encuentra",
-        "headingEm": "tu práctica"
+        "title": "Posturas",
+        "subtitle": "Aprende cada postura paso a paso y practícala a tu ritmo.",
+        "heading": "Perfecciona",
+        "headingEm": "tu postura"
       },
       "myCourses": {
         "title": "Mis cursos",
@@ -482,5 +482,21 @@
       }
     },
     "homeLabel": "Sadhana by Andre"
+  },
+  "catalog": {
+    "search": {
+      "label": "Buscar posturas",
+      "placeholder": "Buscar postura",
+      "submit": "Buscar"
+    },
+    "levels": {
+      "label": "Nivel",
+      "all": "Todos los niveles",
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado"
+    },
+    "clear": "Limpiar filtros",
+    "listSoon": "La lista de posturas llega en la siguiente fase."
   }
 }

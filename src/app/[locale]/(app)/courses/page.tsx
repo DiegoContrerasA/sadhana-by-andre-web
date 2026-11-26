@@ -1,9 +1,22 @@
-import { getSectionMetadata, SectionScreen } from "@/features/app-shell/server"
+import { getLocale } from "next-intl/server"
+
+import { getSectionMetadata } from "@/features/app-shell/server"
+import { CoursesScreen } from "@/features/catalog/server"
+import { getPathname } from "@/i18n/navigation"
 
 export function generateMetadata() {
   return getSectionMetadata("courses")
 }
 
-export default function CoursesPage() {
-  return <SectionScreen section="courses" />
+export default async function CoursesPage({
+  searchParams,
+}: PageProps<"/[locale]/courses">) {
+  const locale = await getLocale()
+
+  return (
+    <CoursesScreen
+      basePath={getPathname({ href: "/courses", locale })}
+      searchParams={searchParams}
+    />
+  )
 }

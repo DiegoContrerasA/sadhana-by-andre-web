@@ -1,6 +1,7 @@
 import { getMessages } from "next-intl/server"
 
-import { SectionHeading } from "../components/section-heading"
+import { SectionHeading } from "@/components/section-heading"
+
 import type { AppSection } from "../utils/app-section"
 
 type SectionScreenProps = {
