@@ -1,6 +1,6 @@
 const placeholderCards = ["first", "second", "third"]
 
-export function MyCoursesSkeleton() {
+export function CollectionSkeleton() {
   return (
     <div
       aria-hidden="true"

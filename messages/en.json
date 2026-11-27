@@ -539,5 +539,17 @@
       "action": "Explore poses"
     },
     "hint": "{count, plural, one {Enrol to watch the lesson.} other {The first lesson is free. Enrol to watch all # lessons.}}"
+  },
+  "favorites": {
+    "button": {
+      "label": "Favorite",
+      "error": "Not saved"
+    },
+    "count": "{count, plural, one {# favorite} other {# favorites}}",
+    "empty": {
+      "title": "No favorites yet",
+      "hint": "Tap the heart on a pose to keep it here.",
+      "action": "Explore poses"
+    }
   }
 }

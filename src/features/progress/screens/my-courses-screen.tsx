@@ -4,7 +4,7 @@ import { Suspense } from "react"
 
 import { SectionHeading } from "@/components/section-heading"
 
-import { MyCoursesSkeleton } from "../components/my-courses-skeleton"
+import { CollectionSkeleton } from "../components/collection-skeleton"
 import { SavedCourses } from "../components/saved-courses"
 
 type MyCoursesScreenProps = {
@@ -27,7 +27,7 @@ export async function MyCoursesScreen({
         headingEm={headingEm}
         subtitle={subtitle}
       />
-      <Suspense fallback={<MyCoursesSkeleton />}>
+      <Suspense fallback={<CollectionSkeleton />}>
         <SavedCourses locale={locale} coursesHref={coursesHref} />
       </Suspense>
     </div>

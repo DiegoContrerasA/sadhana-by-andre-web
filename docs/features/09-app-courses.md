@@ -11,7 +11,8 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 | 3 | Tarjetas y lista de cursos | 🟨 En revisión |
 | 4 | Curso y sus clases | 🟨 En revisión |
 | 5 | Inscripción y Mis cursos | 🟨 En revisión |
-| Por definir | Clase de muestra y pago, Favoritos, Perfil | ⬜ |
+| 6 | Favoritos | 🟨 En revisión |
+| Por definir | Pago, Perfil | ⬜ |
 
 ## Fase 1 · Layout
 
@@ -42,7 +43,7 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - Cuadrícula de 2 columnas en celular y 3 desde `md`.
 - Scroll infinito de 9 en 9 (3 filas de 3 en escritorio), con el botón "Ver más posturas" como alternativa. Se esperan máximo 100 cursos: la lista filtrada llega completa del servidor y el navegador la va mostrando, sin más peticiones.
 - La búsqueda ignora tildes y mayúsculas, y mira el nombre y el sánscrito.
-- Toda la tarjeta es un solo enlace a `/courses/[slug]`. No hay botón de favorito todavía.
+- Toda la tarjeta es un solo enlace a `/courses/[slug]`; el corazón de favorito va aparte, en la esquina.
 - Datos de ejemplo: 27 posturas, 8 con foto y 19 con un marcador. Nombres, textos, niveles y duraciones deben ser revisados por Andre.
 
 ## Fase 4 · Curso y clases
@@ -68,6 +69,13 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - Por ahora inscribirse no cuesta ni pide cuenta. Falta decidir si el acceso será gratis con cuenta o pagado.
 - El bloqueo es de prueba: antes de cobrar se necesitan cuentas y un servicio de video que controle el acceso.
 - Queda para después: continuar en la última clase vista y ver el avance.
+
+## Fase 6 · Favoritos
+
+- Corazón en las tarjetas de Explorar, Mis cursos y Favoritos, y en la pantalla de la clase. Se puede marcar sin abrir el curso y sin inscribirse.
+- "Favoritos" muestra los cursos guardados, el más reciente primero. Sin favoritos, invita a explorar.
+- Favorito significa "guardado para después"; inscribirse es lo que abre las clases.
+- La lista se guarda en el navegador hasta que haya cuentas.
 
 ## Ideas sin decidir
 

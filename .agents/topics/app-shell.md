@@ -2,11 +2,11 @@
 
 ## Qué hace
 
-Estructura de la zona de cursos: menú superior en escritorio y barra inferior en celular. `/courses` tiene el catálogo (ver [`catalog.md`](./catalog.md)) y `/my-courses` los cursos inscritos (ver [`progress.md`](./progress.md)); las demás secciones están vacías.
+Estructura de la zona de cursos: menú superior en escritorio y barra inferior en celular. `/courses` tiene el catálogo (ver [`catalog.md`](./catalog.md)), `/my-courses` los cursos inscritos (ver [`progress.md`](./progress.md)) y `/favorites` los favoritos (ver [`favorites.md`](./favorites.md)); Perfil está vacío.
 
 ## Pantallas y rutas
 
-`/courses`, `/my-courses`, `/favorites` y `/profile` (con `/en`), dentro de `app/[locale]/(app)/`. `/courses` usa `CoursesScreen`, `/my-courses` usa `MyCoursesScreen` y las demás, `SectionScreen`.
+`/courses`, `/my-courses`, `/favorites` y `/profile` (con `/en`), dentro de `app/[locale]/(app)/`. `/courses` usa `CoursesScreen`, `/my-courses` usa `MyCoursesScreen`, `/favorites` usa `FavoritesScreen` y `/profile`, `SectionScreen`.
 
 ## Detalles a tener en cuenta
 

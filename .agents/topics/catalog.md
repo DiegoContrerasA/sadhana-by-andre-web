@@ -11,7 +11,7 @@ Filtros y lista de cursos de `/courses`, y las clases de cada curso. Un curso es
 3. Cada opción es un enlace que conserva los demás filtros. El buscador es un `<Form>` de Next (GET) que envía los filtros activos como campos ocultos.
 4. "Limpiar filtros" vuelve a la dirección sin parámetros.
 5. `getCourses(locale)` devuelve el catálogo en el idioma pedido (cacheado, tags en `src/constants/cache-tags.ts`) y `filterCourses` aplica búsqueda y nivel.
-6. `CourseResults` muestra el contador o el estado vacío. `CourseGrid`, componente cliente, recibe los cursos, pinta cada `CourseCard`, muestra 9 y suma 9 cuando el final se acerca (`useInfiniteReveal`) o al usar el botón. Al cambiar los filtros vuelve a 9.
+6. `CourseResults` muestra el contador o el estado vacío. `CourseGrid`, componente cliente, recibe los cursos y los favoritos (ver [`favorites.md`](./favorites.md)), pinta cada `CourseCard`, muestra 9 y suma 9 cuando el final se acerca (`useInfiniteReveal`) o al usar el botón. Al cambiar los filtros vuelve a 9.
 
 ## Clases de un curso
 

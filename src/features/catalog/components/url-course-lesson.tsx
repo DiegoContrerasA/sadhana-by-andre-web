@@ -1,6 +1,8 @@
 import type { Locale } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
 import { Suspense } from "react"
+
+import { SavedFavoriteButton } from "@/features/favorites/server"
 import { getLesson } from "../data/get-lesson"
 import type { CourseAccess } from "../schema/course-access.schema"
 import { CourseOverview } from "./course-overview"
@@ -73,6 +75,11 @@ export async function UrlCourseLesson({
               total: lessons.length,
             })}
             levelLabel={level ? catalog.levels[level] : undefined}
+            action={
+              <Suspense fallback={<LessonPlaceholder className="size-10" />}>
+                <SavedFavoriteButton slug={slug} courseName={course.name} />
+              </Suspense>
+            }
           />
         </div>
         <div className="flex flex-col gap-4 lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1">

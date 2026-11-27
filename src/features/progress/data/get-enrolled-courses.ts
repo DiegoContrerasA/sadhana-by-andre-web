@@ -4,6 +4,7 @@ import type { Locale } from "next-intl"
 
 import { getCourses } from "@/features/catalog/server"
 
+import { selectCourses } from "../utils/select-courses"
 import { getEnrolledSlugs } from "./get-enrolled-slugs"
 
 export async function getEnrolledCourses(locale: Locale) {
@@ -12,7 +13,5 @@ export async function getEnrolledCourses(locale: Locale) {
     getCourses(locale),
   ])
 
-  return slugs.flatMap((slug) =>
-    courses.filter((course) => course.slug === slug),
-  )
+  return selectCourses(courses, slugs)
 }

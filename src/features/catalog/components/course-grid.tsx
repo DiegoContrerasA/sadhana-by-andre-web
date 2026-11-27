@@ -3,6 +3,7 @@
 import type { Messages } from "next-intl"
 
 import { Button } from "@/components/ui/button"
+import { FavoriteButton } from "@/features/favorites"
 
 import { useInfiniteReveal } from "../hooks/use-infinite-reveal"
 import type { Course } from "../schema/course.schema"
@@ -14,9 +15,17 @@ type CourseGridProps = {
   copy: Messages["catalog"]
   basePath: string
   courses: Course[]
+  favoriteCopy: Messages["favorites"]["button"]
+  favoriteSlugs: string[]
 }
 
-export function CourseGrid({ copy, basePath, courses }: CourseGridProps) {
+export function CourseGrid({
+  copy,
+  basePath,
+  courses,
+  favoriteCopy,
+  favoriteSlugs,
+}: CourseGridProps) {
   const { visibleCount, hasMore, sentinelRef, showMore } = useInfiniteReveal(
     courses.length,
   )
@@ -32,6 +41,14 @@ export function CourseGrid({ copy, basePath, courses }: CourseGridProps) {
               href={`${basePath}/${course.slug}`}
               levelLabel={course.level ? copy.levels[course.level] : undefined}
               isEager={index < eagerCardCount}
+              action={
+                <FavoriteButton
+                  copy={favoriteCopy}
+                  slug={course.slug}
+                  courseName={course.name}
+                  isFavorite={favoriteSlugs.includes(course.slug)}
+                />
+              }
             />
           </li>
         ))}

@@ -1,6 +1,8 @@
 import type { Locale } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
 
+import { getFavoriteSlugs } from "@/features/favorites/server"
+
 import { getCourses } from "../data/get-courses"
 import { courseFiltersSchema } from "../schema/course-filters.schema"
 import { buildFiltersHref } from "../utils/build-filters-href"
@@ -19,12 +21,14 @@ export async function UrlCourseCatalog({
   basePath,
   searchParams,
 }: UrlCourseCatalogProps) {
-  const [{ catalog }, t, courses, params] = await Promise.all([
+  const [messages, t, courses, params, favoriteSlugs] = await Promise.all([
     getMessages(),
     getTranslations("catalog"),
     getCourses(locale),
     searchParams,
+    getFavoriteSlugs(),
   ])
+  const { catalog, favorites } = messages
   const filters = courseFiltersSchema.parse(params)
   const results = filterCourses(courses, filters)
 
@@ -37,6 +41,8 @@ export async function UrlCourseCatalog({
         basePath={basePath}
         courses={results}
         countLabel={t("resultCount", { count: results.length })}
+        favoriteCopy={favorites.button}
+        favoriteSlugs={favoriteSlugs}
       />
     </>
   )

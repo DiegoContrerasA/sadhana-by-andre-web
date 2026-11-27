@@ -539,5 +539,17 @@
       "action": "Explorar posturas"
     },
     "hint": "{count, plural, one {Inscríbete para ver la clase.} other {La primera clase es gratis. Inscríbete para ver las # clases.}}"
+  },
+  "favorites": {
+    "button": {
+      "label": "Favorito",
+      "error": "No se guardó"
+    },
+    "count": "{count, plural, one {# favorito} other {# favoritos}}",
+    "empty": {
+      "title": "Aún no tienes favoritos",
+      "hint": "Toca el corazón de una postura para guardarla aquí.",
+      "action": "Explorar posturas"
+    }
   }
 }

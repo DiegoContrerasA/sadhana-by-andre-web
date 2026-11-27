@@ -1,3 +1,5 @@
+import type { ReactNode } from "react"
+
 import { Badge } from "@/components/ui/badge"
 
 type LessonHeadingProps = {
@@ -7,6 +9,7 @@ type LessonHeadingProps = {
   description: string
   positionLabel: string
   levelLabel?: string
+  action?: ReactNode
 }
 
 export function LessonHeading({
@@ -16,6 +19,7 @@ export function LessonHeading({
   description,
   positionLabel,
   levelLabel,
+  action,
 }: LessonHeadingProps) {
   return (
     <div className="flex flex-col items-start gap-3">
@@ -23,9 +27,12 @@ export function LessonHeading({
         <p>{positionLabel}</p>
         {levelLabel ? <Badge variant="soft">{levelLabel}</Badge> : null}
       </div>
-      <p className="text-sm text-primary">
-        {courseName} · <i lang="sa-Latn">{sanskritName}</i>
-      </p>
+      <div className="flex items-center gap-3">
+        <p className="text-sm text-primary">
+          {courseName} · <i lang="sa-Latn">{sanskritName}</i>
+        </p>
+        {action}
+      </div>
       <h1 className="text-3xl leading-tight md:text-4xl">{title}</h1>
       <p className="max-w-2xl text-muted-foreground">{description}</p>
     </div>

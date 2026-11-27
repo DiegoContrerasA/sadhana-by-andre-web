@@ -1,6 +1,7 @@
 import { ClockIcon, PlayIcon } from "lucide-react"
 import Link from "next/link"
 import type { Messages } from "next-intl"
+import type { ReactNode } from "react"
 
 import { Badge } from "@/components/ui/badge"
 import { buttonVariants } from "@/components/ui/button"
@@ -18,6 +19,7 @@ type CourseCardProps = {
   href: string
   levelLabel?: string
   isEager?: boolean
+  action?: ReactNode
 }
 
 export function CourseCard({
@@ -26,12 +28,13 @@ export function CourseCard({
   href,
   levelLabel,
   isEager,
+  action,
 }: CourseCardProps) {
   const { slug, name, sanskritName, summary, durationMinutes } = course
   const titleId = `course-${slug}`
 
   return (
-    <article className="group @container relative aspect-4/5 overflow-hidden rounded-xl bg-overlay text-overlay-foreground has-focus-visible:ring-3 has-focus-visible:ring-ring">
+    <article className="group @container relative aspect-4/5 overflow-hidden rounded-xl bg-overlay text-overlay-foreground has-[a:focus-visible]:ring-3 has-[a:focus-visible]:ring-ring">
       <CourseCover
         imageUrl={course.imageUrl}
         sizes={coverSizes}
@@ -78,6 +81,11 @@ export function CourseCard({
         aria-labelledby={titleId}
         className="absolute inset-0 z-10 outline-none"
       />
+      {action ? (
+        <div className="absolute top-2 right-2 z-20 sm:top-3 sm:right-3">
+          {action}
+        </div>
+      ) : null}
     </article>
   )
 }

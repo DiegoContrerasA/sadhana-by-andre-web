@@ -5,6 +5,13 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest"
 import messages from "../../../../messages/es.json"
 import { CourseGrid } from "./course-grid"
 
+vi.mock("@/features/favorites/actions/add-favorite", () => ({
+  addFavorite: vi.fn(),
+}))
+vi.mock("@/features/favorites/actions/remove-favorite", () => ({
+  removeFavorite: vi.fn(),
+}))
+
 const observers: IntersectionObserverCallback[] = []
 
 class FakeIntersectionObserver {
@@ -35,6 +42,8 @@ function renderGrid(total: number) {
       copy={messages.catalog}
       basePath="/courses"
       courses={courses}
+      favoriteCopy={messages.favorites.button}
+      favoriteSlugs={["course-1"]}
     />,
   )
 }
@@ -55,6 +64,15 @@ describe("CourseGrid", () => {
     expect(screen.getAllByRole("listitem")).toHaveLength(9)
   })
 
+  it("marks the favorite courses", () => {
+    renderGrid(9)
+
+    const pressed = screen.getAllByRole("button", { pressed: true })
+
+    expect(pressed).toHaveLength(1)
+    expect(pressed[0]).toHaveAccessibleName("Favorito: Course 1")
+  })
+
   it("reveals more courses when the end of the list gets close", () => {
     renderGrid(27)
 
@@ -63,7 +81,9 @@ describe("CourseGrid", () => {
 
     reachEndOfList()
     expect(screen.getAllByRole("listitem")).toHaveLength(27)
-    expect(screen.queryByRole("button")).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole("button", { name: "Ver más posturas" }),
+    ).not.toBeInTheDocument()
   })
 
   it("also reveals more courses from the button", async () => {
@@ -76,9 +96,11 @@ describe("CourseGrid", () => {
     expect(screen.getAllByRole("listitem")).toHaveLength(18)
   })
 
-  it("has no button when every course fits in the first page", () => {
+  it("has no load button when every course fits in the first page", () => {
     renderGrid(9)
 
-    expect(screen.queryByRole("button")).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole("button", { name: "Ver más posturas" }),
+    ).not.toBeInTheDocument()
   })
 })

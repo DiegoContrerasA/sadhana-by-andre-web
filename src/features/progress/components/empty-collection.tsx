@@ -2,12 +2,12 @@ import type { Messages } from "next-intl"
 
 import { LinkButton } from "@/components/link-button"
 
-type EmptyMyCoursesProps = {
+type EmptyCollectionProps = {
   copy: Messages["myCourses"]["empty"]
   exploreHref: string
 }
 
-export function EmptyMyCourses({ copy, exploreHref }: EmptyMyCoursesProps) {
+export function EmptyCollection({ copy, exploreHref }: EmptyCollectionProps) {
   return (
     <div className="flex flex-col items-center gap-3 rounded-xl border border-primary/15 bg-background px-6 py-16 text-center">
       <h2 className="text-2xl">{copy.title}</h2>
