@@ -8,6 +8,7 @@ import { cacheTags } from "@/constants/cache-tags"
 import mockCourses from "@/lib/catalog/mock-courses.json"
 
 import { type Course, courseRecordSchema } from "../schema/course.schema"
+import { toCourse } from "../utils/to-course"
 
 export async function getCourses(locale: Locale): Promise<Course[]> {
   "use cache"
@@ -16,9 +17,5 @@ export async function getCourses(locale: Locale): Promise<Course[]> {
 
   const records = z.array(courseRecordSchema).parse(mockCourses)
 
-  return records.map(({ name, summary, ...course }) => ({
-    ...course,
-    name: name[locale],
-    summary: summary[locale],
-  }))
+  return records.map((record) => toCourse(record, locale))
 }

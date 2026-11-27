@@ -5,17 +5,19 @@ import type { Locale } from "next-intl"
 
 import { siteName } from "@/constants/site"
 
-import { getCourse } from "./get-course"
+import { getLesson } from "./get-lesson"
 
 export async function getCourseMetadata(
   locale: Locale,
   slug: string,
+  lessonSlug?: string,
 ): Promise<Metadata> {
-  const course = await getCourse(locale, slug)
+  const { course, lesson } = await getLesson(locale, slug, lessonSlug)
+  const pageName = lessonSlug ? `${lesson.title} · ${course.name}` : course.name
 
   return {
-    title: `${course.name} | ${siteName}`,
-    description: course.summary,
+    title: `${pageName} | ${siteName}`,
+    description: lessonSlug ? lesson.description : course.summary,
     robots: { index: false, follow: false },
   }
 }

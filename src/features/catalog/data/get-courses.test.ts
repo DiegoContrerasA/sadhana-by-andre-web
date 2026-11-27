@@ -22,6 +22,13 @@ describe("getCourses", () => {
     expect(cacheLife).toHaveBeenCalledWith("days")
   })
 
+  it("adds up the lessons and leaves them out of the list", async () => {
+    const [tree] = await getCourses("es")
+
+    expect(tree?.durationMinutes).toBe(14)
+    expect(tree).not.toHaveProperty("lessons")
+  })
+
   it("keeps slugs unique", async () => {
     const slugs = (await getCourses("es")).map((course) => course.slug)
 

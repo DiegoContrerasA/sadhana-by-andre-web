@@ -507,9 +507,18 @@
       "duration": "Duración",
       "open": "Ir al curso"
     },
-    "detail": {
-      "back": "Volver a explorar",
-      "soon": "Las clases de este curso estarán disponibles pronto."
+    "lesson": {
+      "breadcrumb": "Ruta de navegación",
+      "explore": "Explorar",
+      "content": "Contenido",
+      "count": "{count, plural, one {# clase} other {# clases}}",
+      "position": "Clase {current} de {total}",
+      "pager": "Clases anterior y siguiente",
+      "previous": "Anterior",
+      "next": "Siguiente clase",
+      "video": "Video de la clase: {title}",
+      "captions": "Español",
+      "overview": "Sobre la postura"
     }
   }
 }

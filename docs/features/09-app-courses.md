@@ -9,7 +9,8 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 | 1 | Layout: menú superior, barra inferior en celular y secciones vacías | ✅ |
 | 2 | Filtros y búsqueda | ✅ |
 | 3 | Tarjetas y lista de cursos | 🟨 En revisión |
-| Por definir | Detalle del curso, clase de muestra, Mis cursos, Favoritos, Perfil | ⬜ |
+| 4 | Curso y sus clases | 🟨 En revisión |
+| Por definir | Clase de muestra y pago, Mis cursos, Favoritos, Perfil | ⬜ |
 
 ## Fase 1 · Layout
 
@@ -41,8 +42,20 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - Scroll infinito de 9 en 9 (3 filas de 3 en escritorio), con el botón "Ver más posturas" como alternativa. Se esperan máximo 100 cursos: la lista filtrada llega completa del servidor y el navegador la va mostrando, sin más peticiones.
 - La búsqueda ignora tildes y mayúsculas, y mira el nombre y el sánscrito.
 - Toda la tarjeta es un solo enlace a `/courses/[slug]`. No hay botón de favorito todavía.
-- Detalle básico: foto, sánscrito, nombre, nivel, duración, resumen y aviso de que las clases llegan pronto. Su contenido completo (videos, pasos, muestra gratis) está sin definir.
 - Datos de ejemplo: 27 posturas, 8 con foto y 19 con un marcador. Nombres, textos, niveles y duraciones deben ser revisados por Andre.
+
+## Fase 4 · Curso y clases
+
+- Cada curso es una postura: la primera clase la explica y las demás tienen un enfoque propio, con título, duración y descripción.
+- Al entrar a un curso se abre la primera clase. Cada una de las demás tiene su dirección: `/courses/tree/foundation`.
+- Escritorio: video a la izquierda y lista "Contenido" a la derecha, con la clase actual resaltada. En pantallas menores la lista va después de la clase y antes de la descripción general.
+- Ruta de navegación (`Explorar / Árbol / La postura`), "Anterior" y "Siguiente clase" bajo el video, y la descripción de la clase.
+- Descripción general de la postura debajo de la clase: texto y listas (qué se trabaja, qué se necesita y qué tener en cuenta). Por ahora es el mismo texto de ejemplo en todos los cursos, para evaluar cómo se ve con mucha información.
+- Sin reproducción automática. El video se pausa al cambiar de pantalla.
+- La referencia fue la pantalla de clase de midu.dev. Quedan para después: video flotante al bajar, clases vistas y progreso, candados y precio.
+- Todo el contenido es de ejemplo: los nombres de las clases ("La base", "Alineación", "Profundizar"), sus descripciones, la cantidad de clases y un mismo video corto sin sonido.
+- Falta decidir dónde se alojan los videos reales. Si son de pago, el servicio debe controlar quién puede verlos.
+- Los videos reales necesitan sus propios subtítulos.
 
 ## Ideas sin decidir
 

@@ -10,9 +10,58 @@
       "es": "Encuentra el equilibrio sobre un pie sin perder la calma.",
       "en": "Find your balance on one foot without losing your calm."
     },
-    "durationMinutes": 14,
     "level": "beginner",
-    "imageUrl": "/courses/tree.jpg"
+    "imageUrl": "/courses/tree.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 6
+      }
+    ]
   },
   {
     "slug": "standing-forward-fold",
@@ -25,9 +74,46 @@
       "es": "Suelta la espalda y alarga la parte posterior de las piernas.",
       "en": "Release your back and lengthen the backs of your legs."
     },
-    "durationMinutes": 12,
     "level": "beginner",
-    "imageUrl": "/courses/standing-forward-fold.jpg"
+    "imageUrl": "/courses/standing-forward-fold.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      }
+    ]
   },
   {
     "slug": "forearm-stand",
@@ -40,9 +126,58 @@
       "es": "Construye una base firme en hombros y centro antes de subir.",
       "en": "Build a steady base in shoulders and core before lifting."
     },
-    "durationMinutes": 38,
     "level": "advanced",
-    "imageUrl": "/courses/forearm-stand.jpg"
+    "imageUrl": "/courses/forearm-stand.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 6
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 9
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 9
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 14
+      }
+    ]
   },
   {
     "slug": "scorpion",
@@ -55,9 +190,58 @@
       "es": "Combina equilibrio invertido con una extensión profunda de espalda.",
       "en": "Combine an inverted balance with a deep backbend."
     },
-    "durationMinutes": 45,
     "level": "advanced",
-    "imageUrl": "/courses/scorpion.jpg"
+    "imageUrl": "/courses/scorpion.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 7
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 11
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 11
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 16
+      }
+    ]
   },
   {
     "slug": "easy-seat",
@@ -70,8 +254,45 @@
       "es": "La base para respirar y meditar con la espalda larga.",
       "en": "The foundation for breathing and meditating with a long spine."
     },
-    "durationMinutes": 10,
-    "imageUrl": "/courses/easy-seat.jpg"
+    "imageUrl": "/courses/easy-seat.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      }
+    ]
   },
   {
     "slug": "revolved-head-to-knee",
@@ -84,9 +305,58 @@
       "es": "Abre el costado del cuerpo combinando flexión y torsión.",
       "en": "Open the side body with a combined bend and twist."
     },
-    "durationMinutes": 18,
     "level": "intermediate",
-    "imageUrl": "/courses/revolved-head-to-knee.jpg"
+    "imageUrl": "/courses/revolved-head-to-knee.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 7
+      }
+    ]
   },
   {
     "slug": "cobra",
@@ -99,9 +369,46 @@
       "es": "Abre el pecho sin cargar la zona baja de la espalda.",
       "en": "Open your chest without straining your lower back."
     },
-    "durationMinutes": 11,
     "level": "beginner",
-    "imageUrl": "/courses/cobra.jpg"
+    "imageUrl": "/courses/cobra.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      }
+    ]
   },
   {
     "slug": "seated-forward-fold",
@@ -114,9 +421,46 @@
       "es": "Alarga la espalda antes de buscar los pies.",
       "en": "Lengthen your spine before reaching for your feet."
     },
-    "durationMinutes": 13,
     "level": "beginner",
-    "imageUrl": "/courses/seated-forward-fold.jpg"
+    "imageUrl": "/courses/seated-forward-fold.jpg",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 6
+      }
+    ]
   },
   {
     "slug": "downward-dog",
@@ -129,8 +473,57 @@
       "es": "Reparte el peso entre manos y pies y alarga la columna.",
       "en": "Share your weight between hands and feet and lengthen your spine."
     },
-    "durationMinutes": 16,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 6
+      }
+    ]
   },
   {
     "slug": "warrior-one",
@@ -143,8 +536,57 @@
       "es": "Afirma las piernas y eleva el pecho con estabilidad.",
       "en": "Ground your legs and lift your chest with stability."
     },
-    "durationMinutes": 15,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 7
+      }
+    ]
   },
   {
     "slug": "warrior-two",
@@ -157,8 +599,57 @@
       "es": "Fortalece las piernas mientras abres caderas y brazos.",
       "en": "Strengthen your legs while opening hips and arms."
     },
-    "durationMinutes": 15,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 7
+      }
+    ]
   },
   {
     "slug": "triangle",
@@ -171,8 +662,57 @@
       "es": "Alarga ambos costados manteniendo las piernas activas.",
       "en": "Lengthen both sides while keeping your legs active."
     },
-    "durationMinutes": 14,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 6
+      }
+    ]
   },
   {
     "slug": "mountain",
@@ -185,7 +725,44 @@
       "es": "La alineación de pie sobre la que se construyen las demás.",
       "en": "The standing alignment every other pose builds on."
     },
-    "durationMinutes": 8
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      }
+    ]
   },
   {
     "slug": "child",
@@ -198,7 +775,44 @@
       "es": "Un descanso para soltar la espalda y volver a la respiración.",
       "en": "A resting pose to release your back and return to your breath."
     },
-    "durationMinutes": 7
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 1
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      }
+    ]
   },
   {
     "slug": "bridge",
@@ -211,8 +825,45 @@
       "es": "Eleva la cadera activando piernas y glúteos.",
       "en": "Lift your hips by engaging legs and glutes."
     },
-    "durationMinutes": 12,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      }
+    ]
   },
   {
     "slug": "boat",
@@ -225,8 +876,57 @@
       "es": "Trabaja el centro sin dejar que el pecho se hunda.",
       "en": "Work your core without letting your chest collapse."
     },
-    "durationMinutes": 17,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 7
+      }
+    ]
   },
   {
     "slug": "plank",
@@ -239,8 +939,45 @@
       "es": "Sostén una línea firme desde la cabeza hasta los talones.",
       "en": "Hold a strong line from head to heels."
     },
-    "durationMinutes": 9,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      }
+    ]
   },
   {
     "slug": "crow",
@@ -253,8 +990,57 @@
       "es": "Lleva el peso a las manos con control y mirada al frente.",
       "en": "Shift your weight into your hands with control and a forward gaze."
     },
-    "durationMinutes": 28,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 7
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 7
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 10
+      }
+    ]
   },
   {
     "slug": "pigeon",
@@ -267,8 +1053,57 @@
       "es": "Abre las caderas con paciencia y buen apoyo.",
       "en": "Open your hips with patience and good support."
     },
-    "durationMinutes": 22,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 5
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 9
+      }
+    ]
   },
   {
     "slug": "camel",
@@ -281,8 +1116,57 @@
       "es": "Extiende la espalda abriendo el frente del cuerpo.",
       "en": "Bend back while opening the front of your body."
     },
-    "durationMinutes": 21,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 5
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 8
+      }
+    ]
   },
   {
     "slug": "wheel",
@@ -295,8 +1179,57 @@
       "es": "Una extensión completa que pide hombros y piernas activos.",
       "en": "A full backbend that asks for active shoulders and legs."
     },
-    "durationMinutes": 34,
-    "level": "advanced"
+    "level": "advanced",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 5
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 8
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 8
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 13
+      }
+    ]
   },
   {
     "slug": "half-moon",
@@ -309,8 +1242,57 @@
       "es": "Equilibra sobre una pierna con el cuerpo abierto de lado.",
       "en": "Balance on one leg with your body open to the side."
     },
-    "durationMinutes": 24,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 6
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 6
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 8
+      }
+    ]
   },
   {
     "slug": "chair",
@@ -323,8 +1305,45 @@
       "es": "Activa las piernas y mantén el pecho amplio.",
       "en": "Engage your legs and keep your chest broad."
     },
-    "durationMinutes": 10,
-    "level": "beginner"
+    "level": "beginner",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 5
+      }
+    ]
   },
   {
     "slug": "cat-cow",
@@ -337,7 +1356,44 @@
       "es": "Mueve la columna al ritmo de la respiración.",
       "en": "Move your spine in time with your breath."
     },
-    "durationMinutes": 8
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 3
+      }
+    ]
   },
   {
     "slug": "corpse",
@@ -350,7 +1406,44 @@
       "es": "Deja que el cuerpo asimile la práctica en quietud.",
       "en": "Let your body absorb the practice in stillness."
     },
-    "durationMinutes": 9
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 2
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      }
+    ]
   },
   {
     "slug": "headstand",
@@ -363,8 +1456,57 @@
       "es": "Aprende a sostenerte con antebrazos fuertes y cuello protegido.",
       "en": "Learn to support yourself with strong forearms and a protected neck."
     },
-    "durationMinutes": 65,
-    "level": "advanced"
+    "level": "advanced",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 10
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 16
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 16
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 23
+      }
+    ]
   },
   {
     "slug": "bow",
@@ -377,7 +1519,56 @@
       "es": "Abre pecho y caderas impulsándote desde las piernas.",
       "en": "Open chest and hips by pressing from your legs."
     },
-    "durationMinutes": 19,
-    "level": "intermediate"
+    "level": "intermediate",
+    "lessons": [
+      {
+        "slug": "the-pose",
+        "title": {
+          "es": "La postura",
+          "en": "The pose"
+        },
+        "description": {
+          "es": "Explicación de la postura: cómo entrar, cómo salir y en qué fijarte mientras la sostienes.",
+          "en": "The pose explained: how to get in, how to come out, and what to notice while you hold it."
+        },
+        "durationMinutes": 3
+      },
+      {
+        "slug": "foundation",
+        "title": {
+          "es": "La base",
+          "en": "The foundation"
+        },
+        "description": {
+          "es": "El enfoque está en los apoyos: cómo repartir el peso y construir estabilidad antes de avanzar.",
+          "en": "The focus is your base: how to spread your weight and build stability before going further."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "alignment",
+        "title": {
+          "es": "Alineación",
+          "en": "Alignment"
+        },
+        "description": {
+          "es": "El enfoque está en la alineación: revisamos la postura por partes y usamos apoyos cuando hacen falta.",
+          "en": "The focus is alignment: we check the pose part by part and use props when they help."
+        },
+        "durationMinutes": 4
+      },
+      {
+        "slug": "going-deeper",
+        "title": {
+          "es": "Profundizar",
+          "en": "Going deeper"
+        },
+        "description": {
+          "es": "El enfoque está en la respiración y la permanencia para explorar la postura con más calma.",
+          "en": "The focus is breath and longer holds, so you can explore the pose with more ease."
+        },
+        "durationMinutes": 8
+      }
+    ]
   }
 ]

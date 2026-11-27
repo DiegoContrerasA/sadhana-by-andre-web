@@ -507,9 +507,18 @@
       "duration": "Duration",
       "open": "Go to course"
     },
-    "detail": {
-      "back": "Back to explore",
-      "soon": "The classes for this course will be available soon."
+    "lesson": {
+      "breadcrumb": "Breadcrumb",
+      "explore": "Explore",
+      "content": "Content",
+      "count": "{count, plural, one {# lesson} other {# lessons}}",
+      "position": "Lesson {current} of {total}",
+      "pager": "Previous and next lessons",
+      "previous": "Previous",
+      "next": "Next lesson",
+      "video": "Lesson video: {title}",
+      "captions": "English",
+      "overview": "About the pose"
     }
   }
 }

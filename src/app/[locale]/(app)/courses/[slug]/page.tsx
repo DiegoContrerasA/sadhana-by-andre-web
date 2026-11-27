@@ -1,7 +1,7 @@
 import { getLocale } from "next-intl/server"
 
 import {
-  CourseDetailScreen,
+  CourseLessonScreen,
   getCourseMetadata,
   getCourses,
 } from "@/features/catalog/server"
@@ -22,16 +22,16 @@ export async function generateMetadata({
   return getCourseMetadata(locale, slug)
 }
 
-export default async function CourseDetailPage({
+export default async function CoursePage({
   params,
 }: PageProps<"/[locale]/courses/[slug]">) {
-  const [locale, { slug }] = await Promise.all([getLocale(), params])
+  const locale = await getLocale()
 
   return (
-    <CourseDetailScreen
+    <CourseLessonScreen
       locale={locale}
-      slug={slug}
-      backHref={getPathname({ href: "/courses", locale })}
+      exploreHref={getPathname({ href: "/courses", locale })}
+      params={params}
     />
   )
 }
