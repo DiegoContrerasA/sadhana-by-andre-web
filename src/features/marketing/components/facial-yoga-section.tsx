@@ -2,7 +2,7 @@ import type { Messages } from "next-intl"
 
 import { LinkButton } from "@/components/link-button"
 
-import { getWhatsappUrl } from "../utils/whatsapp-url"
+import { getWhatsappUrl } from "@/utils/whatsapp-url"
 import { BenefitList } from "./benefit-list"
 import { FaceCareSection } from "./face-care-section"
 import { FacialVideo } from "./facial-video"

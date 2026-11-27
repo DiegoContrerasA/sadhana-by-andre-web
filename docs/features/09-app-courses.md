@@ -12,7 +12,8 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 | 4 | Curso y sus clases | 🟨 En revisión |
 | 5 | Inscripción y Mis cursos | 🟨 En revisión |
 | 6 | Favoritos | 🟨 En revisión |
-| Por definir | Pago, Perfil | ⬜ |
+| 7 | Perfil | 🟨 En revisión |
+| Por definir | Pago y suscripción | ⬜ |
 
 ## Fase 1 · Layout
 
@@ -76,6 +77,14 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - "Favoritos" muestra los cursos guardados, el más reciente primero. Sin favoritos, invita a explorar.
 - Favorito significa "guardado para después"; inscribirse es lo que abre las clases.
 - La lista se guarda en el navegador hasta que haya cuentas.
+
+## Fase 7 · Perfil
+
+- Resumen con iniciales, nombre, correo y accesos con el número de cursos y favoritos.
+- Datos personales editables: nombre, apellido y teléfono. El correo se muestra sin editar.
+- Idioma (español o inglés), cambiar contraseña y ayuda por WhatsApp.
+- La persona es de ejemplo y los cambios se guardan en el navegador.
+- Con cuentas reales se agregan: cerrar sesión, eliminar la cuenta y cambiar el correo con verificación. Suscripción, medio de pago e historial de pagos quedan pendientes por decisión del usuario.
 
 ## Ideas sin decidir
 

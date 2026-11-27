@@ -1,7 +1,9 @@
 import { z } from "zod"
 
 import { createEmailSchema } from "./email.schema"
+import { createNameSchema } from "./name.schema"
 import { createPasswordSchema } from "./password.schema"
+import { createPhoneSchema } from "./phone.schema"
 
 type SignUpMessageKey =
   | "firstNameRequired"
@@ -19,10 +21,6 @@ type SignUpMessageKey =
 
 type Translate = (key: SignUpMessageKey) => string
 
-function createNameSchema(required: string, length: string) {
-  return z.string().trim().min(1, required).min(2, length).max(50, length)
-}
-
 export function createSignUpSchema(t: Translate) {
   return z.object({
     firstName: createNameSchema(t("firstNameRequired"), t("firstNameLength")),
@@ -31,13 +29,10 @@ export function createSignUpSchema(t: Translate) {
       emailRequired: t("emailRequired"),
       emailInvalid: t("emailInvalid"),
     }),
-    phone: z
-      .string()
-      .trim()
-      .min(1, t("phoneRequired"))
-      .regex(/^\+?[\d\s()-]+$/, t("phoneInvalid"))
-      .transform((value) => value.replace(/[\s()-]/g, ""))
-      .pipe(z.string().regex(/^\+?\d{7,15}$/, t("phoneInvalid"))),
+    phone: createPhoneSchema({
+      phoneRequired: t("phoneRequired"),
+      phoneInvalid: t("phoneInvalid"),
+    }),
     password: createPasswordSchema(t),
   })
 }

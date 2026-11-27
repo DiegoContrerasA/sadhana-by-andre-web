@@ -3,8 +3,8 @@ import Image from "next/image"
 import type { Messages } from "next-intl"
 import { LinkButton } from "@/components/link-button"
 import { Badge } from "@/components/ui/badge"
+import { getWhatsappUrl } from "@/utils/whatsapp-url"
 import backgroundImage from "../assets/cta.jpeg"
-import { getWhatsappUrl } from "../utils/whatsapp-url"
 
 type TrialClassSectionProps = {
   cta: Messages["cta"]

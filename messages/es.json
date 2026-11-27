@@ -454,7 +454,6 @@
       "favorites": "Favoritos",
       "profile": "Perfil"
     },
-    "comingSoon": "Esta sección está en construcción.",
     "sections": {
       "courses": {
         "title": "Posturas",
@@ -550,6 +549,47 @@
       "title": "Aún no tienes favoritos",
       "hint": "Toca el corazón de una postura para guardarla aquí.",
       "action": "Explorar posturas"
+    }
+  },
+  "profile": {
+    "stats": {
+      "courses": "Mis cursos",
+      "favorites": "Favoritos"
+    },
+    "form": {
+      "title": "Datos personales",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "phone": "Teléfono",
+      "email": "Correo",
+      "emailHint": "Es el correo de tu cuenta. Todavía no se puede cambiar.",
+      "submit": "Guardar cambios",
+      "pending": "Guardando…",
+      "success": "Cambios guardados.",
+      "errors": {
+        "firstNameRequired": "Ingresa tu nombre",
+        "firstNameLength": "El nombre debe tener entre 2 y 50 caracteres",
+        "lastNameRequired": "Ingresa tu apellido",
+        "lastNameLength": "El apellido debe tener entre 2 y 50 caracteres",
+        "phoneRequired": "Ingresa tu teléfono",
+        "phoneInvalid": "Ingresa un teléfono válido",
+        "invalidInput": "Revisa los datos e intenta de nuevo",
+        "unknown": "No pudimos guardar los cambios. Inténtalo de nuevo."
+      }
+    },
+    "language": {
+      "title": "Idioma"
+    },
+    "security": {
+      "title": "Contraseña",
+      "hint": "Te enviaremos a la recuperación para crear una nueva.",
+      "changePassword": "Cambiar contraseña"
+    },
+    "help": {
+      "title": "¿Necesitas ayuda?",
+      "hint": "Escríbenos si tienes dudas con tus cursos.",
+      "whatsapp": "Escribir por WhatsApp",
+      "message": "Hola, necesito ayuda con mis cursos de Sadhana."
     }
   }
 }

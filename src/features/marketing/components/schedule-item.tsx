@@ -3,7 +3,7 @@ import type { Messages } from "next-intl"
 import { useTranslations } from "next-intl"
 import { LinkButton } from "@/components/link-button"
 import { Badge } from "@/components/ui/badge"
-import { getWhatsappUrl } from "../utils/whatsapp-url"
+import { getWhatsappUrl } from "@/utils/whatsapp-url"
 
 type ScheduleItemProps = {
   item: Messages["schedule"]["items"][number]

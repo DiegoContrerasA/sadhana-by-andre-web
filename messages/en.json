@@ -454,7 +454,6 @@
       "favorites": "Favorites",
       "profile": "Profile"
     },
-    "comingSoon": "This section is under construction.",
     "sections": {
       "courses": {
         "title": "Poses",
@@ -550,6 +549,47 @@
       "title": "No favorites yet",
       "hint": "Tap the heart on a pose to keep it here.",
       "action": "Explore poses"
+    }
+  },
+  "profile": {
+    "stats": {
+      "courses": "My courses",
+      "favorites": "Favorites"
+    },
+    "form": {
+      "title": "Personal details",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "email": "Email",
+      "emailHint": "This is your account email. It can't be changed yet.",
+      "submit": "Save changes",
+      "pending": "Saving…",
+      "success": "Changes saved.",
+      "errors": {
+        "firstNameRequired": "Enter your first name",
+        "firstNameLength": "First name must be 2 to 50 characters",
+        "lastNameRequired": "Enter your last name",
+        "lastNameLength": "Last name must be 2 to 50 characters",
+        "phoneRequired": "Enter your phone",
+        "phoneInvalid": "Enter a valid phone",
+        "invalidInput": "Check the details and try again",
+        "unknown": "We couldn't save your changes. Try again."
+      }
+    },
+    "language": {
+      "title": "Language"
+    },
+    "security": {
+      "title": "Password",
+      "hint": "We'll take you to recovery to create a new one.",
+      "changePassword": "Change password"
+    },
+    "help": {
+      "title": "Need help?",
+      "hint": "Write to us with any question about your courses.",
+      "whatsapp": "Message us on WhatsApp",
+      "message": "Hi, I need help with my Sadhana courses."
     }
   }
 }

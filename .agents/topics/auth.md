@@ -57,7 +57,7 @@ El token de prueba es fijo: no vence ni es de un solo uso.
 
 ## Archivos clave
 
-`features/auth/`, `lib/auth/mock-users.json`, `app/[locale]/(auth)/`, `public/brand/google.svg`.
+`features/auth/` (su `index.ts` comparte las reglas de nombre y teléfono con el perfil), `lib/auth/mock-users.json`, `app/[locale]/(auth)/`, `public/brand/google.svg`.
 
 ## Pruebas
 

@@ -3,7 +3,7 @@ import type { Messages } from "next-intl"
 import { LinkButton } from "@/components/link-button"
 import { cn } from "@/lib/utils"
 
-import { getWhatsappUrl } from "../utils/whatsapp-url"
+import { getWhatsappUrl } from "@/utils/whatsapp-url"
 import { HeroBrand } from "./hero-brand"
 
 type HeroIntroProps = {

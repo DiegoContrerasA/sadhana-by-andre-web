@@ -22,6 +22,8 @@ Permite inscribirse en un curso para abrir todas sus clases y tenerlo en `/my-co
 - La lectura no usa caché. No se guarda en qué clase quedó la persona ni qué clases vio.
 - La cancelación se hace desde la pantalla del curso y no pide confirmación.
 
+`getEnrolledCount` y `getFavoriteCount` dan los números que muestra el perfil.
+
 ## Archivos clave
 
 `features/progress/`, `app/[locale]/(app)/my-courses/`. Textos en `messages/*.json` bajo `myCourses`.
