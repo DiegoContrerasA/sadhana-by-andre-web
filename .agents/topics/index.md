@@ -9,7 +9,7 @@ Se agregan a medida que se construyen.
 | Tópico | Qué cubre |
 |---|---|
 | [`app-shell.md`](./app-shell.md) | Layout de la zona de cursos |
-| [`catalog.md`](./catalog.md) | Filtros de cursos en la URL |
+| [`catalog.md`](./catalog.md) | Filtros en la URL, lista de cursos y scroll infinito |
 | [`auth.md`](./auth.md) | Inicio de sesión simulado y layout compartido de auth |
 | [`marketing.md`](./marketing.md) | Web pública: landing en es y en, idiomas y SEO |
 

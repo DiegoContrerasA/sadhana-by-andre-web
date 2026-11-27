@@ -497,6 +497,19 @@
       "advanced": "Advanced"
     },
     "clear": "Clear filters",
-    "listSoon": "The list of poses comes in the next phase."
+    "resultCount": "{count, plural, one {# pose} other {# poses}}",
+    "loadMore": "Show more poses",
+    "empty": {
+      "title": "No poses found",
+      "hint": "Try another name or change the level."
+    },
+    "card": {
+      "duration": "Duration",
+      "open": "Go to course"
+    },
+    "detail": {
+      "back": "Back to explore",
+      "soon": "The classes for this course will be available soon."
+    }
   }
 }

@@ -497,6 +497,19 @@
       "advanced": "Avanzado"
     },
     "clear": "Limpiar filtros",
-    "listSoon": "La lista de posturas llega en la siguiente fase."
+    "resultCount": "{count, plural, one {# postura} other {# posturas}}",
+    "loadMore": "Ver más posturas",
+    "empty": {
+      "title": "No encontramos posturas",
+      "hint": "Prueba con otro nombre o cambia el nivel."
+    },
+    "card": {
+      "duration": "Duración",
+      "open": "Ir al curso"
+    },
+    "detail": {
+      "back": "Volver a explorar",
+      "soon": "Las clases de este curso estarán disponibles pronto."
+    }
   }
 }

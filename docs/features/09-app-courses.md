@@ -7,8 +7,8 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 | Fase | Contenido | Estado |
 |---|---|---|
 | 1 | Layout: menú superior, barra inferior en celular y secciones vacías | ✅ |
-| 2 | Filtros y búsqueda | 🟨 En revisión |
-| 3 | Tarjetas y lista de cursos | ⬜ |
+| 2 | Filtros y búsqueda | ✅ |
+| 3 | Tarjetas y lista de cursos | 🟨 En revisión |
 | Por definir | Detalle del curso, clase de muestra, Mis cursos, Favoritos, Perfil | ⬜ |
 
 ## Fase 1 · Layout
@@ -30,7 +30,19 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - Buscador y nivel (`beginner`, `intermediate`, `advanced`). El contenido son clases de posturas y no todas tendrán nivel. No hay filtro por tipo hasta definir categorías de posturas.
 - Los filtros viven en la URL (`/courses?level=beginner&q=cadera`).
 - La búsqueda se aplica al enviar, no mientras se escribe.
-- Todavía no filtran nada: la lista llega en la fase 3. Quedan sin decidir los filtros por acceso y duración.
+- Quedan sin decidir los filtros por acceso y duración.
+
+## Fase 3 · Tarjetas y lista
+
+- Tarjeta: la foto (4:5) ocupa todo. En reposo muestra nivel (si lo tiene) y nombre.
+- Al pasar el cursor o enfocar con teclado aparecen sánscrito, resumen (si la tarjeta es ancha), duración e "Ir al curso".
+- En pantallas táctiles no hay hover: se ven nivel, nombre y duración, y al tocar se abre el curso.
+- Cuadrícula de 2 columnas en celular y 3 desde `md`.
+- Scroll infinito de 9 en 9 (3 filas de 3 en escritorio), con el botón "Ver más posturas" como alternativa. Se esperan máximo 100 cursos: la lista filtrada llega completa del servidor y el navegador la va mostrando, sin más peticiones.
+- La búsqueda ignora tildes y mayúsculas, y mira el nombre y el sánscrito.
+- Toda la tarjeta es un solo enlace a `/courses/[slug]`. No hay botón de favorito todavía.
+- Detalle básico: foto, sánscrito, nombre, nivel, duración, resumen y aviso de que las clases llegan pronto. Su contenido completo (videos, pasos, muestra gratis) está sin definir.
+- Datos de ejemplo: 27 posturas, 8 con foto y 19 con un marcador. Nombres, textos, niveles y duraciones deben ser revisados por Andre.
 
 ## Ideas sin decidir
 

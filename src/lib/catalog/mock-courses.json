@@ -1,0 +1,383 @@
+[
+  {
+    "slug": "tree",
+    "sanskritName": "Vrksasana",
+    "name": {
+      "es": "Árbol",
+      "en": "Tree"
+    },
+    "summary": {
+      "es": "Encuentra el equilibrio sobre un pie sin perder la calma.",
+      "en": "Find your balance on one foot without losing your calm."
+    },
+    "durationMinutes": 14,
+    "level": "beginner",
+    "imageUrl": "/courses/tree.jpg"
+  },
+  {
+    "slug": "standing-forward-fold",
+    "sanskritName": "Uttanasana",
+    "name": {
+      "es": "Flexión de pie",
+      "en": "Standing Forward Fold"
+    },
+    "summary": {
+      "es": "Suelta la espalda y alarga la parte posterior de las piernas.",
+      "en": "Release your back and lengthen the backs of your legs."
+    },
+    "durationMinutes": 12,
+    "level": "beginner",
+    "imageUrl": "/courses/standing-forward-fold.jpg"
+  },
+  {
+    "slug": "forearm-stand",
+    "sanskritName": "Pincha Mayurasana",
+    "name": {
+      "es": "Equilibrio sobre antebrazos",
+      "en": "Forearm Stand"
+    },
+    "summary": {
+      "es": "Construye una base firme en hombros y centro antes de subir.",
+      "en": "Build a steady base in shoulders and core before lifting."
+    },
+    "durationMinutes": 38,
+    "level": "advanced",
+    "imageUrl": "/courses/forearm-stand.jpg"
+  },
+  {
+    "slug": "scorpion",
+    "sanskritName": "Vrischikasana",
+    "name": {
+      "es": "Escorpión",
+      "en": "Scorpion"
+    },
+    "summary": {
+      "es": "Combina equilibrio invertido con una extensión profunda de espalda.",
+      "en": "Combine an inverted balance with a deep backbend."
+    },
+    "durationMinutes": 45,
+    "level": "advanced",
+    "imageUrl": "/courses/scorpion.jpg"
+  },
+  {
+    "slug": "easy-seat",
+    "sanskritName": "Sukhasana",
+    "name": {
+      "es": "Postura fácil",
+      "en": "Easy Seat"
+    },
+    "summary": {
+      "es": "La base para respirar y meditar con la espalda larga.",
+      "en": "The foundation for breathing and meditating with a long spine."
+    },
+    "durationMinutes": 10,
+    "imageUrl": "/courses/easy-seat.jpg"
+  },
+  {
+    "slug": "revolved-head-to-knee",
+    "sanskritName": "Parivrtta Janu Sirsasana",
+    "name": {
+      "es": "Torsión cabeza a rodilla",
+      "en": "Revolved Head-to-Knee"
+    },
+    "summary": {
+      "es": "Abre el costado del cuerpo combinando flexión y torsión.",
+      "en": "Open the side body with a combined bend and twist."
+    },
+    "durationMinutes": 18,
+    "level": "intermediate",
+    "imageUrl": "/courses/revolved-head-to-knee.jpg"
+  },
+  {
+    "slug": "cobra",
+    "sanskritName": "Bhujangasana",
+    "name": {
+      "es": "Cobra",
+      "en": "Cobra"
+    },
+    "summary": {
+      "es": "Abre el pecho sin cargar la zona baja de la espalda.",
+      "en": "Open your chest without straining your lower back."
+    },
+    "durationMinutes": 11,
+    "level": "beginner",
+    "imageUrl": "/courses/cobra.jpg"
+  },
+  {
+    "slug": "seated-forward-fold",
+    "sanskritName": "Paschimottanasana",
+    "name": {
+      "es": "Pinza sentada",
+      "en": "Seated Forward Fold"
+    },
+    "summary": {
+      "es": "Alarga la espalda antes de buscar los pies.",
+      "en": "Lengthen your spine before reaching for your feet."
+    },
+    "durationMinutes": 13,
+    "level": "beginner",
+    "imageUrl": "/courses/seated-forward-fold.jpg"
+  },
+  {
+    "slug": "downward-dog",
+    "sanskritName": "Adho Mukha Svanasana",
+    "name": {
+      "es": "Perro boca abajo",
+      "en": "Downward-Facing Dog"
+    },
+    "summary": {
+      "es": "Reparte el peso entre manos y pies y alarga la columna.",
+      "en": "Share your weight between hands and feet and lengthen your spine."
+    },
+    "durationMinutes": 16,
+    "level": "beginner"
+  },
+  {
+    "slug": "warrior-one",
+    "sanskritName": "Virabhadrasana I",
+    "name": {
+      "es": "Guerrero I",
+      "en": "Warrior I"
+    },
+    "summary": {
+      "es": "Afirma las piernas y eleva el pecho con estabilidad.",
+      "en": "Ground your legs and lift your chest with stability."
+    },
+    "durationMinutes": 15,
+    "level": "beginner"
+  },
+  {
+    "slug": "warrior-two",
+    "sanskritName": "Virabhadrasana II",
+    "name": {
+      "es": "Guerrero II",
+      "en": "Warrior II"
+    },
+    "summary": {
+      "es": "Fortalece las piernas mientras abres caderas y brazos.",
+      "en": "Strengthen your legs while opening hips and arms."
+    },
+    "durationMinutes": 15,
+    "level": "beginner"
+  },
+  {
+    "slug": "triangle",
+    "sanskritName": "Trikonasana",
+    "name": {
+      "es": "Triángulo",
+      "en": "Triangle"
+    },
+    "summary": {
+      "es": "Alarga ambos costados manteniendo las piernas activas.",
+      "en": "Lengthen both sides while keeping your legs active."
+    },
+    "durationMinutes": 14,
+    "level": "beginner"
+  },
+  {
+    "slug": "mountain",
+    "sanskritName": "Tadasana",
+    "name": {
+      "es": "Montaña",
+      "en": "Mountain"
+    },
+    "summary": {
+      "es": "La alineación de pie sobre la que se construyen las demás.",
+      "en": "The standing alignment every other pose builds on."
+    },
+    "durationMinutes": 8
+  },
+  {
+    "slug": "child",
+    "sanskritName": "Balasana",
+    "name": {
+      "es": "Niño",
+      "en": "Child's Pose"
+    },
+    "summary": {
+      "es": "Un descanso para soltar la espalda y volver a la respiración.",
+      "en": "A resting pose to release your back and return to your breath."
+    },
+    "durationMinutes": 7
+  },
+  {
+    "slug": "bridge",
+    "sanskritName": "Setu Bandhasana",
+    "name": {
+      "es": "Puente",
+      "en": "Bridge"
+    },
+    "summary": {
+      "es": "Eleva la cadera activando piernas y glúteos.",
+      "en": "Lift your hips by engaging legs and glutes."
+    },
+    "durationMinutes": 12,
+    "level": "beginner"
+  },
+  {
+    "slug": "boat",
+    "sanskritName": "Navasana",
+    "name": {
+      "es": "Barco",
+      "en": "Boat"
+    },
+    "summary": {
+      "es": "Trabaja el centro sin dejar que el pecho se hunda.",
+      "en": "Work your core without letting your chest collapse."
+    },
+    "durationMinutes": 17,
+    "level": "intermediate"
+  },
+  {
+    "slug": "plank",
+    "sanskritName": "Phalakasana",
+    "name": {
+      "es": "Plancha",
+      "en": "Plank"
+    },
+    "summary": {
+      "es": "Sostén una línea firme desde la cabeza hasta los talones.",
+      "en": "Hold a strong line from head to heels."
+    },
+    "durationMinutes": 9,
+    "level": "beginner"
+  },
+  {
+    "slug": "crow",
+    "sanskritName": "Bakasana",
+    "name": {
+      "es": "Cuervo",
+      "en": "Crow"
+    },
+    "summary": {
+      "es": "Lleva el peso a las manos con control y mirada al frente.",
+      "en": "Shift your weight into your hands with control and a forward gaze."
+    },
+    "durationMinutes": 28,
+    "level": "intermediate"
+  },
+  {
+    "slug": "pigeon",
+    "sanskritName": "Eka Pada Rajakapotasana",
+    "name": {
+      "es": "Paloma",
+      "en": "Pigeon"
+    },
+    "summary": {
+      "es": "Abre las caderas con paciencia y buen apoyo.",
+      "en": "Open your hips with patience and good support."
+    },
+    "durationMinutes": 22,
+    "level": "intermediate"
+  },
+  {
+    "slug": "camel",
+    "sanskritName": "Ustrasana",
+    "name": {
+      "es": "Camello",
+      "en": "Camel"
+    },
+    "summary": {
+      "es": "Extiende la espalda abriendo el frente del cuerpo.",
+      "en": "Bend back while opening the front of your body."
+    },
+    "durationMinutes": 21,
+    "level": "intermediate"
+  },
+  {
+    "slug": "wheel",
+    "sanskritName": "Urdhva Dhanurasana",
+    "name": {
+      "es": "Rueda",
+      "en": "Wheel"
+    },
+    "summary": {
+      "es": "Una extensión completa que pide hombros y piernas activos.",
+      "en": "A full backbend that asks for active shoulders and legs."
+    },
+    "durationMinutes": 34,
+    "level": "advanced"
+  },
+  {
+    "slug": "half-moon",
+    "sanskritName": "Ardha Chandrasana",
+    "name": {
+      "es": "Media luna",
+      "en": "Half Moon"
+    },
+    "summary": {
+      "es": "Equilibra sobre una pierna con el cuerpo abierto de lado.",
+      "en": "Balance on one leg with your body open to the side."
+    },
+    "durationMinutes": 24,
+    "level": "intermediate"
+  },
+  {
+    "slug": "chair",
+    "sanskritName": "Utkatasana",
+    "name": {
+      "es": "Silla",
+      "en": "Chair"
+    },
+    "summary": {
+      "es": "Activa las piernas y mantén el pecho amplio.",
+      "en": "Engage your legs and keep your chest broad."
+    },
+    "durationMinutes": 10,
+    "level": "beginner"
+  },
+  {
+    "slug": "cat-cow",
+    "sanskritName": "Marjaryasana Bitilasana",
+    "name": {
+      "es": "Gato y vaca",
+      "en": "Cat-Cow"
+    },
+    "summary": {
+      "es": "Mueve la columna al ritmo de la respiración.",
+      "en": "Move your spine in time with your breath."
+    },
+    "durationMinutes": 8
+  },
+  {
+    "slug": "corpse",
+    "sanskritName": "Savasana",
+    "name": {
+      "es": "Relajación final",
+      "en": "Corpse Pose"
+    },
+    "summary": {
+      "es": "Deja que el cuerpo asimile la práctica en quietud.",
+      "en": "Let your body absorb the practice in stillness."
+    },
+    "durationMinutes": 9
+  },
+  {
+    "slug": "headstand",
+    "sanskritName": "Sirsasana",
+    "name": {
+      "es": "Parada de cabeza",
+      "en": "Headstand"
+    },
+    "summary": {
+      "es": "Aprende a sostenerte con antebrazos fuertes y cuello protegido.",
+      "en": "Learn to support yourself with strong forearms and a protected neck."
+    },
+    "durationMinutes": 65,
+    "level": "advanced"
+  },
+  {
+    "slug": "bow",
+    "sanskritName": "Dhanurasana",
+    "name": {
+      "es": "Arco",
+      "en": "Bow"
+    },
+    "summary": {
+      "es": "Abre pecho y caderas impulsándote desde las piernas.",
+      "en": "Open chest and hips by pressing from your legs."
+    },
+    "durationMinutes": 19,
+    "level": "intermediate"
+  }
+]

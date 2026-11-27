@@ -15,6 +15,7 @@ export default async function CoursesPage({
 
   return (
     <CoursesScreen
+      locale={locale}
       basePath={getPathname({ href: "/courses", locale })}
       searchParams={searchParams}
     />

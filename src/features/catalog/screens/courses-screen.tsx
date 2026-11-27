@@ -1,21 +1,24 @@
+import type { Locale } from "next-intl"
 import { getMessages } from "next-intl/server"
 import { Suspense } from "react"
 
 import { SectionHeading } from "@/components/section-heading"
 
-import { CourseFiltersSkeleton } from "../components/course-filters-skeleton"
-import { UrlCourseFilters } from "../components/url-course-filters"
+import { CourseCatalogSkeleton } from "../components/course-catalog-skeleton"
+import { UrlCourseCatalog } from "../components/url-course-catalog"
 
 type CoursesScreenProps = {
+  locale: Locale
   basePath: string
   searchParams: Promise<unknown>
 }
 
 export async function CoursesScreen({
+  locale,
   basePath,
   searchParams,
 }: CoursesScreenProps) {
-  const { app, catalog } = await getMessages()
+  const { app } = await getMessages()
   const { title, heading, headingEm, subtitle } = app.sections.courses
 
   return (
@@ -26,12 +29,13 @@ export async function CoursesScreen({
         headingEm={headingEm}
         subtitle={subtitle}
       />
-      <Suspense fallback={<CourseFiltersSkeleton />}>
-        <UrlCourseFilters basePath={basePath} searchParams={searchParams} />
+      <Suspense fallback={<CourseCatalogSkeleton />}>
+        <UrlCourseCatalog
+          locale={locale}
+          basePath={basePath}
+          searchParams={searchParams}
+        />
       </Suspense>
-      <p className="rounded-lg border border-primary/15 bg-background px-6 py-16 text-center text-sm text-muted-foreground">
-        {catalog.listSoon}
-      </p>
     </div>
   )
 }
