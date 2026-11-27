@@ -8,11 +8,11 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 |---|---|---|
 | 1 | Layout: menú superior, barra inferior en celular y secciones vacías | ✅ |
 | 2 | Filtros y búsqueda | ✅ |
-| 3 | Tarjetas y lista de cursos | 🟨 En revisión |
-| 4 | Curso y sus clases | 🟨 En revisión |
-| 5 | Inscripción y Mis cursos | 🟨 En revisión |
-| 6 | Favoritos | 🟨 En revisión |
-| 7 | Perfil | 🟨 En revisión |
+| 3 | Tarjetas y lista de cursos | ✅ |
+| 4 | Curso y sus clases | ✅ |
+| 5 | Inscripción y Mis cursos | ✅ |
+| 6 | Favoritos | ✅ |
+| 7 | Perfil | ✅ |
 | Por definir | Pago y suscripción | ⬜ |
 
 ## Fase 1 · Layout
