@@ -464,7 +464,7 @@
       },
       "myCourses": {
         "title": "Mis cursos",
-        "subtitle": "Continúa donde quedaste.",
+        "subtitle": "Tus cursos, a un clic.",
         "heading": "Continúa",
         "headingEm": "tu camino"
       },
@@ -518,7 +518,26 @@
       "next": "Siguiente clase",
       "video": "Video de la clase: {title}",
       "captions": "Español",
-      "overview": "Sobre la postura"
+      "overview": "Sobre la postura",
+      "free": "Gratis",
+      "locked": "Requiere inscripción",
+      "lockedTitle": "Inscríbete para ver esta clase"
     }
+  },
+  "myCourses": {
+    "enrollment": {
+      "enroll": "Inscribirme",
+      "enrolled": "Este curso está en Mis cursos.",
+      "view": "Ver mis cursos",
+      "error": "No pudimos guardar el cambio. Inténtalo de nuevo.",
+      "cancel": "Cancelar inscripción"
+    },
+    "count": "{count, plural, one {# curso} other {# cursos}}",
+    "empty": {
+      "title": "Aún no tienes cursos",
+      "hint": "Inscríbete en una postura y la encontrarás aquí.",
+      "action": "Explorar posturas"
+    },
+    "hint": "{count, plural, one {Inscríbete para ver la clase.} other {La primera clase es gratis. Inscríbete para ver las # clases.}}"
   }
 }

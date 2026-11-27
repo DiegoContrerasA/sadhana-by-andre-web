@@ -10,7 +10,8 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 | 2 | Filtros y búsqueda | ✅ |
 | 3 | Tarjetas y lista de cursos | 🟨 En revisión |
 | 4 | Curso y sus clases | 🟨 En revisión |
-| Por definir | Clase de muestra y pago, Mis cursos, Favoritos, Perfil | ⬜ |
+| 5 | Inscripción y Mis cursos | 🟨 En revisión |
+| Por definir | Clase de muestra y pago, Favoritos, Perfil | ⬜ |
 
 ## Fase 1 · Layout
 
@@ -56,6 +57,17 @@ La organización sigue la referencia del usuario (menú superior, título, filtr
 - Todo el contenido es de ejemplo: los nombres de las clases ("La base", "Alineación", "Profundizar"), sus descripciones, la cantidad de clases y un mismo video corto sin sonido.
 - Falta decidir dónde se alojan los videos reales. Si son de pago, el servicio debe controlar quién puede verlos.
 - Los videos reales necesitan sus propios subtítulos.
+
+## Fase 5 · Inscripción y Mis cursos
+
+- Sin inscribirse se ve completa solo la primera clase, marcada "Gratis". Las demás muestran título, descripción, duración y candado, y en lugar del video está "Inscríbete para ver esta clase".
+- Al inscribirse se abren todas las clases en la misma pantalla.
+- En la pantalla del curso, encima de "Contenido": botón "Inscribirme". Ya inscrito muestra "Ver mis cursos" y "Cancelar inscripción".
+- "Mis cursos" muestra las mismas tarjetas del catálogo, la inscripción más reciente primero. Sin cursos, invita a explorar.
+- Mientras no haya cuentas, la lista se guarda en una cookie del navegador: no se comparte entre dispositivos. Con cuentas reales se guardará en la API.
+- Por ahora inscribirse no cuesta ni pide cuenta. Falta decidir si el acceso será gratis con cuenta o pagado.
+- El bloqueo es de prueba: antes de cobrar se necesitan cuentas y un servicio de video que controle el acceso.
+- Queda para después: continuar en la última clase vista y ver el avance.
 
 ## Ideas sin decidir
 

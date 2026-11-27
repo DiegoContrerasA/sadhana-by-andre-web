@@ -10,6 +10,7 @@ Se agregan a medida que se construyen.
 |---|---|
 | [`app-shell.md`](./app-shell.md) | Layout de la zona de cursos |
 | [`catalog.md`](./catalog.md) | Filtros en la URL, lista de cursos, scroll infinito y clases de cada curso |
+| [`progress.md`](./progress.md) | Inscripción en cursos y "Mis cursos" |
 | [`auth.md`](./auth.md) | Inicio de sesión simulado y layout compartido de auth |
 | [`marketing.md`](./marketing.md) | Web pública: landing en es y en, idiomas y SEO |
 

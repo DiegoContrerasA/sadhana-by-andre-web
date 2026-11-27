@@ -464,7 +464,7 @@
       },
       "myCourses": {
         "title": "My courses",
-        "subtitle": "Pick up where you left off.",
+        "subtitle": "Your courses, one click away.",
         "heading": "Continue",
         "headingEm": "your journey"
       },
@@ -518,7 +518,26 @@
       "next": "Next lesson",
       "video": "Lesson video: {title}",
       "captions": "English",
-      "overview": "About the pose"
+      "overview": "About the pose",
+      "free": "Free",
+      "locked": "Enrolment required",
+      "lockedTitle": "Enrol to watch this lesson"
     }
+  },
+  "myCourses": {
+    "enrollment": {
+      "enroll": "Enrol",
+      "enrolled": "This course is in My courses.",
+      "view": "View my courses",
+      "error": "We couldn't save the change. Try again.",
+      "cancel": "Cancel enrolment"
+    },
+    "count": "{count, plural, one {# course} other {# courses}}",
+    "empty": {
+      "title": "You don't have courses yet",
+      "hint": "Enrol in a pose and you will find it here.",
+      "action": "Explore poses"
+    },
+    "hint": "{count, plural, one {Enrol to watch the lesson.} other {The first lesson is free. Enrol to watch all # lessons.}}"
   }
 }

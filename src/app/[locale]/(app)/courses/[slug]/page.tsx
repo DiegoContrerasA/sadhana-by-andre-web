@@ -5,6 +5,7 @@ import {
   getCourseMetadata,
   getCourses,
 } from "@/features/catalog/server"
+import { createCourseAccess } from "@/features/progress/server"
 import { getPathname } from "@/i18n/navigation"
 import { routing } from "@/i18n/routing"
 
@@ -26,12 +27,14 @@ export default async function CoursePage({
   params,
 }: PageProps<"/[locale]/courses/[slug]">) {
   const locale = await getLocale()
+  const myCoursesHref = getPathname({ href: "/my-courses", locale })
 
   return (
     <CourseLessonScreen
       locale={locale}
       exploreHref={getPathname({ href: "/courses", locale })}
       params={params}
+      access={createCourseAccess(myCoursesHref)}
     />
   )
 }

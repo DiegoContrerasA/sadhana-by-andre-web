@@ -17,9 +17,12 @@ Filtros y lista de cursos de `/courses`, y las clases de cada curso. Un curso es
 
 1. `/courses/[slug]` muestra la primera clase. Las demás están en `/courses/[slug]/[lesson]`. La dirección con el slug de la primera clase no existe, para no duplicar la página.
 2. Las dos rutas pasan `params` sin esperarlo a `CourseLessonScreen`. `UrlCourseLesson`, dentro de `<Suspense>` con `CourseLessonSkeleton`, lo lee y pide `getLesson` (curso, clase, anterior y siguiente) y `getLessonVideo`.
-3. En orden: ruta de navegación, video, anterior y siguiente, y datos de la clase. La lista de clases va a la derecha desde `lg` (fija al bajar). Debajo de la clase va la descripción general de la postura (`CourseOverview`), igual en todas las clases del curso; en pantallas menores la lista queda antes de esa descripción.
-4. El video es el reproductor nativo, sin reproducción automática. Como Next oculta la pantalla anterior en vez de desmontarla, `usePauseOnHide` lo pausa al salir. Al volver con el botón del navegador queda en el mismo segundo.
-5. Un curso o una clase que no existe responde `notFound()`. La respuesta puede llegar con estado 200 porque la ruta se transmite por partes; las páginas llevan `noindex`.
+3. En orden: ruta de navegación, video, anterior y siguiente, y datos de la clase. La lista de clases va a la derecha desde `lg` (fija al bajar); encima de ella va el panel de inscripción (ver [`progress.md`](./progress.md)). Debajo de la clase va la descripción general de la postura (`CourseOverview`), igual en todas las clases del curso; en pantallas menores la lista queda antes de esa descripción.
+4. Sin acceso solo se abre la primera clase (`isLessonLocked`). `GatedLessonVideo` muestra en las demás `LockedLesson` con el botón para inscribirse, y no pide ni envía la dirección del video. El título, la descripción y la navegación siguen visibles.
+5. `GatedLessonList` marca la primera como "Gratis", pone candado a las demás y muestra la descripción de todas. Con acceso quedan solo los títulos.
+6. `catalog` no sabe qué es inscribirse: recibe un `CourseAccess` (`hasAccess`, `renderPanel`, `renderUnlockAction`) que la ruta crea con `createCourseAccess` de `progress`. El video y la lista leen el acceso cada uno en su `<Suspense>`; el resto de la clase no depende del usuario.
+7. El video es el reproductor nativo, sin reproducción automática. Como Next oculta la pantalla anterior en vez de desmontarla, `usePauseOnHide` lo pausa al salir. Al volver con el botón del navegador queda en el mismo segundo.
+8. Un curso o una clase que no existe responde `notFound()`. La respuesta puede llegar con estado 200 porque la ruta se transmite por partes; las páginas llevan `noindex`.
 
 ## Detalles a tener en cuenta
 
@@ -42,4 +45,4 @@ Filtros y lista de cursos de `/courses`, y las clases de cada curso. Un curso es
 
 ## Pruebas
 
-Cubierto: schema, enlaces, campos ocultos, limpiar, lectura de la lista, de un curso y de una clase, filtrado, duración, tarjeta, carga por tandas, lista de clases, anterior y siguiente, y la pausa del video al ocultarse. Falta: E2E de la búsqueda, el scroll y la navegación entre clases.
+Cubierto: schema, enlaces, campos ocultos, limpiar, lectura de la lista, de un curso y de una clase, filtrado, duración, tarjeta, carga por tandas, lista de clases con y sin acceso, clase bloqueada, anterior y siguiente, y la pausa del video al ocultarse. Falta: E2E de la búsqueda, el scroll y la navegación entre clases.

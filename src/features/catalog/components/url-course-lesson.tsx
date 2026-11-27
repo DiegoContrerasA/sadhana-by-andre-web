@@ -1,37 +1,38 @@
 import type { Locale } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
+import { Suspense } from "react"
 import { getLesson } from "../data/get-lesson"
-import { getLessonVideo } from "../data/get-lesson-video"
-import { formatDuration } from "../utils/format-duration"
+import type { CourseAccess } from "../schema/course-access.schema"
 import { CourseOverview } from "./course-overview"
+import { GatedLessonList } from "./gated-lesson-list"
+import { GatedLessonVideo } from "./gated-lesson-video"
 import { LessonBreadcrumb } from "./lesson-breadcrumb"
 import { LessonHeading } from "./lesson-heading"
-import { LessonList } from "./lesson-list"
 import { LessonPager } from "./lesson-pager"
-import { LessonVideo } from "./lesson-video"
+import { LessonPlaceholder } from "./lesson-placeholder"
 
 type UrlCourseLessonProps = {
   locale: Locale
   exploreHref: string
   params: Promise<{ slug: string; lesson?: string }>
+  access: CourseAccess
 }
 
 export async function UrlCourseLesson({
   locale,
   exploreHref,
   params,
+  access,
 }: UrlCourseLessonProps) {
   const { slug, lesson: lessonSlug } = await params
   const courseHref = `${exploreHref}/${slug}`
-  const [{ catalog }, t, video, current] = await Promise.all([
+  const [{ catalog }, t, current] = await Promise.all([
     getMessages(),
     getTranslations("catalog.lesson"),
-    getLessonVideo(locale),
     getLesson(locale, slug, lessonSlug),
   ])
   const { course, lesson, index, previous, next } = current
   const { lessons, level } = course
-  const countLabel = t("count", { count: lessons.length })
 
   return (
     <article className="flex flex-col gap-5">
@@ -45,12 +46,16 @@ export async function UrlCourseLesson({
       />
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_20rem] lg:grid-rows-[auto_1fr] lg:items-start">
         <div className="flex flex-col gap-6">
-          <LessonVideo
-            key={`${slug}/${lesson.slug}`}
-            {...video}
-            label={t("video", { title: lesson.title })}
-            captionsLabel={catalog.lesson.captions}
-          />
+          <Suspense fallback={<LessonPlaceholder className="aspect-video" />}>
+            <GatedLessonVideo
+              locale={locale}
+              copy={catalog.lesson}
+              course={course}
+              lesson={lesson}
+              lessonIndex={index}
+              access={access}
+            />
+          </Suspense>
           <LessonPager
             copy={catalog.lesson}
             courseHref={courseHref}
@@ -70,14 +75,16 @@ export async function UrlCourseLesson({
             levelLabel={level ? catalog.levels[level] : undefined}
           />
         </div>
-        <div className="lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-          <LessonList
-            title={catalog.lesson.content}
-            summaryLabel={`${countLabel} · ${formatDuration(course.durationMinutes)}`}
-            courseHref={courseHref}
-            lessons={lessons}
-            currentSlug={lesson.slug}
-          />
+        <div className="flex flex-col gap-4 lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          {access.renderPanel(slug, lessons.length)}
+          <Suspense fallback={<LessonPlaceholder className="h-72" />}>
+            <GatedLessonList
+              courseHref={courseHref}
+              course={course}
+              currentSlug={lesson.slug}
+              access={access}
+            />
+          </Suspense>
         </div>
         <CourseOverview
           title={catalog.lesson.overview}
